@@ -15,7 +15,7 @@ namespace PMS
 
         public Functions()
         {
-            conStr = @"Data Source=MSI;Initial Catalog=RMS;Integrated Security=True; ";
+            conStr = @"Data Source=LAPTOP-V6FVPVK1\SQLEXPRESS;Initial Catalog=RMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True ";
             con = new SqlConnection(conStr);
             cmd = new SqlCommand();
             cmd.Connection = con;

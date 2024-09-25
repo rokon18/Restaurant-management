@@ -36,7 +36,7 @@ namespace Restaurant_management
         }
 
         // Connection String 
-        string conStr = "Data Source=MSI;Initial Catalog=RMS;Integrated Security=True; ";
+        string conStr = "Data Source=LAPTOP-V6FVPVK1\\SQLEXPRESS;Initial Catalog=RMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         private void Loginbutton_Click(object sender, EventArgs e)
         {
