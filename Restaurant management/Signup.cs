@@ -36,7 +36,7 @@ namespace Restaurant_management
             }
         }
 
-        string constring = "Data Source=MSI;Initial Catalog=RMS;Integrated Security=True;";
+        string constring = "Data Source=DESKTOP-46MR55N\\SQLEXPRESS;Integrated Security=True";
         string mailformat = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
         string phoneformat = @"^\d{11}$"; 
 
