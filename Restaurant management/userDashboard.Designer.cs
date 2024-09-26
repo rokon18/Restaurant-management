@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Orderbutton = new System.Windows.Forms.Button();
             this.Changepasswordbutton = new System.Windows.Forms.Button();
             this.Logoutbutton = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.Namelabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -58,20 +58,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, -3);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 45);
+            this.panel1.Size = new System.Drawing.Size(605, 37);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "My Account ";
             // 
             // Orderbutton
             // 
@@ -79,12 +70,11 @@
             this.Orderbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Orderbutton.FlatAppearance.BorderSize = 0;
             this.Orderbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Orderbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Orderbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Orderbutton.ForeColor = System.Drawing.Color.Black;
-            this.Orderbutton.Location = new System.Drawing.Point(17, 222);
-            this.Orderbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.Orderbutton.Location = new System.Drawing.Point(13, 180);
             this.Orderbutton.Name = "Orderbutton";
-            this.Orderbutton.Size = new System.Drawing.Size(232, 44);
+            this.Orderbutton.Size = new System.Drawing.Size(174, 36);
             this.Orderbutton.TabIndex = 18;
             this.Orderbutton.Text = "ORDERS";
             this.Orderbutton.UseVisualStyleBackColor = false;
@@ -95,12 +85,11 @@
             this.Changepasswordbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Changepasswordbutton.FlatAppearance.BorderSize = 0;
             this.Changepasswordbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Changepasswordbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Changepasswordbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Changepasswordbutton.ForeColor = System.Drawing.Color.Black;
-            this.Changepasswordbutton.Location = new System.Drawing.Point(17, 302);
-            this.Changepasswordbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.Changepasswordbutton.Location = new System.Drawing.Point(13, 245);
             this.Changepasswordbutton.Name = "Changepasswordbutton";
-            this.Changepasswordbutton.Size = new System.Drawing.Size(232, 44);
+            this.Changepasswordbutton.Size = new System.Drawing.Size(174, 36);
             this.Changepasswordbutton.TabIndex = 19;
             this.Changepasswordbutton.Text = "Change Password";
             this.Changepasswordbutton.UseVisualStyleBackColor = false;
@@ -112,12 +101,11 @@
             this.Logoutbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logoutbutton.FlatAppearance.BorderSize = 0;
             this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logoutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logoutbutton.ForeColor = System.Drawing.Color.Black;
-            this.Logoutbutton.Location = new System.Drawing.Point(17, 383);
-            this.Logoutbutton.Margin = new System.Windows.Forms.Padding(4);
+            this.Logoutbutton.Location = new System.Drawing.Point(13, 311);
             this.Logoutbutton.Name = "Logoutbutton";
-            this.Logoutbutton.Size = new System.Drawing.Size(232, 44);
+            this.Logoutbutton.Size = new System.Drawing.Size(174, 36);
             this.Logoutbutton.TabIndex = 20;
             this.Logoutbutton.Text = "Log out";
             this.Logoutbutton.UseVisualStyleBackColor = false;
@@ -133,40 +121,39 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.Namelabel);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(267, 48);
+            this.panel3.Location = new System.Drawing.Point(200, 39);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(502, 435);
+            this.panel3.Size = new System.Drawing.Size(377, 354);
             this.panel3.TabIndex = 21;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.emaillabel);
-            this.panel6.Location = new System.Drawing.Point(22, 313);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(16, 254);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(273, 36);
+            this.panel6.Size = new System.Drawing.Size(205, 30);
             this.panel6.TabIndex = 23;
             // 
             // emaillabel
             // 
             this.emaillabel.AutoSize = true;
-            this.emaillabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emaillabel.Location = new System.Drawing.Point(5, 0);
-            this.emaillabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emaillabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emaillabel.Location = new System.Drawing.Point(4, 5);
             this.emaillabel.Name = "emaillabel";
-            this.emaillabel.Size = new System.Drawing.Size(150, 25);
+            this.emaillabel.Size = new System.Drawing.Size(103, 16);
             this.emaillabel.TabIndex = 19;
             this.emaillabel.Text = "xyz@email.com";
             // 
             // Emailadresslabel
             // 
             this.Emailadresslabel.AutoSize = true;
-            this.Emailadresslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emailadresslabel.Location = new System.Drawing.Point(17, 286);
-            this.Emailadresslabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Emailadresslabel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Emailadresslabel.Location = new System.Drawing.Point(13, 232);
             this.Emailadresslabel.Name = "Emailadresslabel";
-            this.Emailadresslabel.Size = new System.Drawing.Size(151, 25);
+            this.Emailadresslabel.Size = new System.Drawing.Size(106, 18);
             this.Emailadresslabel.TabIndex = 23;
             this.Emailadresslabel.Text = "Email Address";
             // 
@@ -174,31 +161,29 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.labelphone);
-            this.panel5.Location = new System.Drawing.Point(22, 210);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(16, 171);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(273, 39);
+            this.panel5.Size = new System.Drawing.Size(205, 32);
             this.panel5.TabIndex = 22;
             // 
             // labelphone
             // 
             this.labelphone.AutoSize = true;
-            this.labelphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelphone.Location = new System.Drawing.Point(5, 11);
-            this.labelphone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelphone.Location = new System.Drawing.Point(4, 7);
             this.labelphone.Name = "labelphone";
-            this.labelphone.Size = new System.Drawing.Size(104, 20);
+            this.labelphone.Size = new System.Drawing.Size(81, 16);
             this.labelphone.TabIndex = 19;
             this.labelphone.Text = "880 1456656";
             // 
             // Phonenolabel
             // 
             this.Phonenolabel.AutoSize = true;
-            this.Phonenolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phonenolabel.Location = new System.Drawing.Point(17, 183);
-            this.Phonenolabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Phonenolabel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Phonenolabel.Location = new System.Drawing.Point(13, 149);
             this.Phonenolabel.Name = "Phonenolabel";
-            this.Phonenolabel.Size = new System.Drawing.Size(104, 25);
+            this.Phonenolabel.Size = new System.Drawing.Size(69, 18);
             this.Phonenolabel.TabIndex = 21;
             this.Phonenolabel.Text = "Phone no";
             // 
@@ -206,31 +191,29 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.userfullnamelabel);
-            this.panel4.Location = new System.Drawing.Point(22, 104);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(16, 84);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 36);
+            this.panel4.Size = new System.Drawing.Size(205, 30);
             this.panel4.TabIndex = 20;
             // 
             // userfullnamelabel
             // 
             this.userfullnamelabel.AutoSize = true;
-            this.userfullnamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userfullnamelabel.Location = new System.Drawing.Point(4, 5);
-            this.userfullnamelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.userfullnamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userfullnamelabel.Location = new System.Drawing.Point(3, 5);
             this.userfullnamelabel.Name = "userfullnamelabel";
-            this.userfullnamelabel.Size = new System.Drawing.Size(160, 25);
+            this.userfullnamelabel.Size = new System.Drawing.Size(111, 16);
             this.userfullnamelabel.TabIndex = 18;
             this.userfullnamelabel.Text = "User\'s Full Name";
             // 
             // Namelabel
             // 
             this.Namelabel.AutoSize = true;
-            this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Namelabel.Location = new System.Drawing.Point(17, 77);
-            this.Namelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Namelabel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.Namelabel.Location = new System.Drawing.Point(13, 63);
             this.Namelabel.Name = "Namelabel";
-            this.Namelabel.Size = new System.Drawing.Size(68, 25);
+            this.Namelabel.Size = new System.Drawing.Size(48, 18);
             this.Namelabel.TabIndex = 19;
             this.Namelabel.Text = "Name";
             // 
@@ -238,11 +221,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(13, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 25);
+            this.label3.Size = new System.Drawing.Size(142, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Account Information";
             // 
@@ -250,23 +232,36 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 58);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 91);
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "My Account ";
+            // 
             // userDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 533);
+            this.ClientSize = new System.Drawing.Size(602, 433);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Logoutbutton);
             this.Controls.Add(this.Changepasswordbutton);
             this.Controls.Add(this.Orderbutton);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "userDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "userDashboard";
@@ -289,7 +284,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Orderbutton;
         private System.Windows.Forms.Button Changepasswordbutton;
         private System.Windows.Forms.Button Logoutbutton;
@@ -305,5 +299,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label emaillabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

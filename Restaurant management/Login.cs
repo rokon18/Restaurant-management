@@ -48,7 +48,7 @@ namespace Restaurant_management
                     con.Open();
 
                     
-                    SqlCommand cmd = new SqlCommand("SELECT Firstname, Lastname, Email,Contactno, Role FROM SignupTable WHERE Username = @Username AND Password = @Password", con);
+                    SqlCommand cmd = new SqlCommand("use [RMS] SELECT Firstname, Lastname, Email,Contactno, Role FROM SignupTable WHERE Username = @Username AND Password = @Password", con);
                     cmd.Parameters.AddWithValue("@Username", usertextBox.Text);
                     cmd.Parameters.AddWithValue("@Password", passwordtextBox.Text);
 
@@ -68,6 +68,15 @@ namespace Restaurant_management
                             this.Hide();
                             adminDashboard.ShowDialog();
                         }
+
+                        else if(Role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                        {
+                            ManagerDashboard managerDashboard = new ManagerDashboard(Firstname, Lastname, Email, Contactno);
+                            Login.stack.Push(this);
+                            this.Hide();
+                            managerDashboard.ShowDialog();
+                        }
+
                         else
                         {
                             userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);

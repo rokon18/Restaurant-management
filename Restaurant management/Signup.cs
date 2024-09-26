@@ -94,7 +94,7 @@ namespace Restaurant_management
                 using (SqlConnection con = new SqlConnection(constring))
                 {
                     con.Open();
-                    SqlCommand checkusername = new SqlCommand("SELECT COUNT(*) FROM SignupTable WHERE Username = @Username", con);
+                    SqlCommand checkusername = new SqlCommand("use [RMS] SELECT COUNT(*) FROM SignupTable WHERE Username = @Username", con);
                     checkusername.Parameters.AddWithValue("@Username", usertxt.Text);
                     int user = (int)checkusername.ExecuteScalar();
 
@@ -105,7 +105,7 @@ namespace Restaurant_management
                     }
                     else
                     {
-                        SqlCommand cmd = new SqlCommand("INSERT INTO SignupTable (Firstname, Lastname, Username, Email, Role, Password, Contactno) VALUES (@Firstname, @Lastname, @Username, @Email, @Role, @Password, @Contactno)", con);
+                        SqlCommand cmd = new SqlCommand("use [RMS] INSERT INTO SignupTable (Firstname, Lastname, Username, Email, Role, Password, Contactno) VALUES (@Firstname, @Lastname, @Username, @Email, @Role, @Password, @Contactno)", con);
                         cmd.Parameters.AddWithValue("@Firstname", Firstnametxt.Text);
                         cmd.Parameters.AddWithValue("@Lastname", lastnametxt.Text);
                         cmd.Parameters.AddWithValue("@Username", usertxt.Text);

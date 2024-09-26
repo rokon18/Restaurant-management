@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Restaurant_management
 {
-    public partial class userDashboard : Form
+    public partial class ManagerDashboard : Form
     {
         private string Firstname;
         private string Lastname;
         private string Email;
         private string Contactno;
 
-        public userDashboard(string Firstname, string Lastname, string Email, string Contactno)
+        public ManagerDashboard(string Firstname, string Lastname, string Email, string Contactno)
         {
             InitializeComponent();
             this.Firstname = Firstname;
@@ -26,7 +26,7 @@ namespace Restaurant_management
             this.Contactno = Contactno;
         }
 
-        private void userDashboard_Load(object sender, EventArgs e)
+        private void ManagerDashboard_Load(object sender, EventArgs e)
         {
             //display all information
             userfullnamelabel.Text = $"{Firstname} {Lastname}";
@@ -55,5 +55,15 @@ namespace Restaurant_management
                 log.ShowDialog();
             }
         }
+
+        private void AddProduct_Click(object sender, EventArgs e)
+        {
+            AddProduct ap = new AddProduct();
+            this.Hide();
+            ap.ShowDialog();
+        }
+
+        
+        
     }
 }
