@@ -208,7 +208,6 @@
             this.phonelabel.Size = new System.Drawing.Size(138, 25);
             this.phonelabel.TabIndex = 19;
             this.phonelabel.Text = "880 1456656";
-            
             // 
             // Emailadresslabel
             // 
