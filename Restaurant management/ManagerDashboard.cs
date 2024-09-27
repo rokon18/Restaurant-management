@@ -16,5 +16,55 @@ namespace Restaurant_management
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to close this application ?", "closing window", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+
+
+                Login log = new Login();
+                Login.stack.Push(this);
+                this.Hide();
+                log.ShowDialog();
+            }
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+           Product_List PL = new Product_List();
+            Login.stack.Push(this);
+            this.Hide();
+            PL.ShowDialog();
+
+        }
+
+        private void btnchgpass_Click(object sender, EventArgs e)
+        {
+          
+            
+                Changepassword ch = new Changepassword();
+                Login.stack.Push(this);
+                this.Hide();
+                ch.ShowDialog();
+            
+        }
+
+        private void btnupdateProduct_Click(object sender, EventArgs e)
+        {
+            Product_List PL = new Product_List();
+            Login.stack.Push(this);
+            this.Hide();
+            PL.ShowDialog();
+        }
+
+        private void btndeProduct_Click(object sender, EventArgs e)
+        {
+            Product_List PL = new Product_List();
+            Login.stack.Push(this);
+            this.Hide();
+            PL.ShowDialog();
+        }
     }
 }

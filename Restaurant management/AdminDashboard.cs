@@ -63,14 +63,7 @@ namespace Restaurant_management
             }
         }
 
-        private void Addmanagerbutton_Click(object sender, EventArgs e)
-        {
-           // Adminaddmanger add = new Adminaddmanger();
-            //Login.stack.Push(this);
-           // this.Hide();
-           // add.ShowDialog();
 
-        }
 
         private void btnadminchangepasss_Click(object sender, EventArgs e)
         {

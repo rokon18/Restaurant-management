@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Restaurant_management
 {
     public partial class Login : Form
@@ -40,6 +41,9 @@ namespace Restaurant_management
 
         private void Loginbutton_Click(object sender, EventArgs e)
         {
+            string username = usertextBox.Text;
+            Session.CurrentUsername = username ;
+
             if (usertextBox.Text != "" && passwordtextBox.Text != "")
             {
                 using (SqlConnection con = new SqlConnection(conStr))
@@ -69,6 +73,14 @@ namespace Restaurant_management
                             if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
+                                Login.stack.Push(this);
+                                this.Hide();
+                                adminDashboard.ShowDialog();
+                            }
+
+                            else if (Role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                            {
+                                ManagerDashboard adminDashboard = new ManagerDashboard();
                                 Login.stack.Push(this);
                                 this.Hide();
                                 adminDashboard.ShowDialog();

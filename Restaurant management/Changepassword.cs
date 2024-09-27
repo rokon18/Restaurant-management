@@ -1,13 +1,6 @@
-﻿//using PMS;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant_management
@@ -15,6 +8,7 @@ namespace Restaurant_management
     public partial class Changepassword : Form
     {
         Functions con;
+
         public Changepassword()
         {
             InitializeComponent();
@@ -23,7 +17,7 @@ namespace Restaurant_management
 
         private void Backpicture_Click(object sender, EventArgs e)
         {
-            if(Login.stack.Count>0)
+            if (Login.stack.Count > 0)
             {
                 Form previousForm = Login.stack.Pop();
                 this.Hide();
@@ -33,38 +27,26 @@ namespace Restaurant_management
 
         private void showpasswordcheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (showpasswordcheckbox.Checked)
-            {
-                Currentpasswordtxt.UseSystemPasswordChar = false;
-                Newpasswordtxt.UseSystemPasswordChar = false;
-                Confirmpasswordtxt.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                Currentpasswordtxt.UseSystemPasswordChar = true;
-                Newpasswordtxt.UseSystemPasswordChar = true;
-                Confirmpasswordtxt.UseSystemPasswordChar = true;
-            }
+            bool showPassword = showpasswordcheckbox.Checked;
+            Currentpasswordtxt.UseSystemPasswordChar = !showPassword;
+            Newpasswordtxt.UseSystemPasswordChar = !showPassword;
+            Confirmpasswordtxt.UseSystemPasswordChar = !showPassword;
         }
 
-
-
-
-       
         private void Confirmbutton_Click(object sender, EventArgs e)
         {
-            string username = Usernametxt.Text;
+            // Get the current user's username from the session
+            string username = Session.CurrentUsername; // Assuming Session.CurrentUsername holds the logged-in username
             string currentPassword = Currentpasswordtxt.Text;
             string newPassword = Newpasswordtxt.Text;
             string confirmPassword = Confirmpasswordtxt.Text;
 
-            if (validationInputs(username, currentPassword, newPassword, confirmPassword))
+            if (validationInputs(currentPassword, newPassword, confirmPassword))
             {
-                if (updatePassword(username, currentPassword ,newPassword))
+                if (updatePassword(username, currentPassword, newPassword))
                 {
                     MessageBox.Show("Password changed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
-                    
                 }
                 else
                 {
@@ -74,10 +56,9 @@ namespace Restaurant_management
             }
         }
 
-        private bool validationInputs(string username, string curPass, string newPass, string conPass)
+        private bool validationInputs(string curPass, string newPass, string conPass)
         {
-            
-            if (username == "" || curPass == "" || newPass == "" || conPass == "")
+            if (string.IsNullOrWhiteSpace(curPass) || string.IsNullOrWhiteSpace(newPass) || string.IsNullOrWhiteSpace(conPass))
             {
                 MessageBox.Show("Please fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
@@ -90,26 +71,22 @@ namespace Restaurant_management
             return true;
         }
 
-
-
         private bool updatePassword(string username, string curPass, string newPass)
         {
             string ValidationQuery = "SELECT Password FROM SignupTable WHERE Username = @username";
             var validationParameters = new Dictionary<string, object>
             {
                 {"@username", username}
-
             };
             DataTable parametersResult = con.GetData(ValidationQuery, validationParameters);
 
-
-            //Update Password
+            // Update Password
             if (parametersResult.Rows.Count > 0 && parametersResult.Rows[0][0].ToString() == curPass)
             {
                 string updatePassQuery = "UPDATE SignupTable SET Password = @newPass WHERE Username = @username AND Password = @curPass";
                 var updatePassParam = new Dictionary<string, object>
                 {
-                    {"@username",username},
+                    {"@username", username},
                     {"@curPass", curPass},
                     {"@newPass", newPass}
                 };

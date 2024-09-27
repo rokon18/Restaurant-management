@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnadminchangepasss = new System.Windows.Forms.Button();
             this.Logoutbutton = new System.Windows.Forms.Button();
             this.Customerbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.Emailadresslabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.emaillabel = new System.Windows.Forms.Label();
-            this.btnadminchangepasss = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,6 +65,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 668);
             this.panel1.TabIndex = 0;
+            // 
+            // btnadminchangepasss
+            // 
+            this.btnadminchangepasss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnadminchangepasss.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnadminchangepasss.Location = new System.Drawing.Point(40, 499);
+            this.btnadminchangepasss.Name = "btnadminchangepasss";
+            this.btnadminchangepasss.Size = new System.Drawing.Size(188, 60);
+            this.btnadminchangepasss.TabIndex = 6;
+            this.btnadminchangepasss.Text = "change password";
+            this.btnadminchangepasss.UseVisualStyleBackColor = false;
+            this.btnadminchangepasss.Click += new System.EventHandler(this.btnadminchangepasss_Click);
             // 
             // Logoutbutton
             // 
@@ -226,23 +238,11 @@
             this.emaillabel.TabIndex = 19;
             this.emaillabel.Text = "xyz@email.com";
             // 
-            // btnadminchangepasss
-            // 
-            this.btnadminchangepasss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnadminchangepasss.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnadminchangepasss.Location = new System.Drawing.Point(40, 499);
-            this.btnadminchangepasss.Name = "btnadminchangepasss";
-            this.btnadminchangepasss.Size = new System.Drawing.Size(188, 60);
-            this.btnadminchangepasss.TabIndex = 6;
-            this.btnadminchangepasss.Text = "change password";
-            this.btnadminchangepasss.UseVisualStyleBackColor = false;
-            this.btnadminchangepasss.Click += new System.EventHandler(this.btnadminchangepasss_Click);
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 666);
+            this.ClientSize = new System.Drawing.Size(913, 663);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.Emailadresslabel);
             this.Controls.Add(this.panel3);
