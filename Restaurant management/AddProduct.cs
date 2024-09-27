@@ -24,7 +24,7 @@ namespace Restaurant_management
             InitializeComponent();
             //LoadProductTable();
             ConfigureDataGridView();
-            menuForm = new MenuForm();
+            //menuForm = new MenuForm();
 
         }
 
@@ -85,7 +85,7 @@ namespace Restaurant_management
         {
             if (addedPanel != null)
             {
-                menuForm = new MenuForm();
+                //menuForm = new MenuForm();
                 menuForm.Controls.Add(addedPanel);
                 menuForm.Show();
             }

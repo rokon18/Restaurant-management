@@ -80,9 +80,10 @@ namespace Restaurant_management
                         else
                         {
                             userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);
+                            MenuForm menu = new MenuForm(Firstname, Lastname, Email, Contactno);
                             Login.stack.Push(this);
                             this.Hide();
-                            dashboard.ShowDialog();
+                            menu.ShowDialog();
                         }
                     }
                     else

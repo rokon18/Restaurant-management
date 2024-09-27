@@ -14,12 +14,26 @@ namespace Restaurant_management
     {
 
         private CartPage cartPage;
+        private userDashboard user;
 
-        public MenuForm()
+        private string Firstname;
+        private string Lastname;
+        private string Email;
+        private string Contactno;
+
+        public MenuForm(string Firstname, string Lastname, string Email, string Contactno)
         {
             InitializeComponent();
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.Email = Email;
+            this.Contactno = Contactno;
+
             cartPage = new CartPage();
             cartPage.Tag = this;  // Pass the reference of MenuForm to CartPage
+
+            user = new userDashboard(Firstname, Lastname, Email, Contactno);
+            user.Tag = this; // Pass the reference of MenuForm to UserDashboard
         }
 
 
@@ -159,6 +173,13 @@ namespace Restaurant_management
             {
                 MessageBox.Show("Quantity must be greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void GoProfile_Click(object sender, EventArgs e)
+        {
+            this.Hide();  // Hide the CartPage
+            //MenuForm menuForm = (MenuForm)this.Tag;  // Retrieve the MenuForm instance passed through Tag property
+            user.Show();
         }
     }
 }

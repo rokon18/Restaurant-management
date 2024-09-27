@@ -55,5 +55,14 @@ namespace Restaurant_management
                 log.ShowDialog();
             }
         }
+
+        private void GoMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();  
+            MenuForm menuForm = (MenuForm)this.Tag;  // Retrieve the MenuForm instance passed through Tag property
+            menuForm.Show();
+        }
+
+        
     }
 }

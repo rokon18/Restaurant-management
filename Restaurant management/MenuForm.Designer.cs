@@ -69,6 +69,8 @@ namespace Restaurant_management
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Ql3 = new System.Windows.Forms.NumericUpDown();
+            this.Apb3 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.Pl3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -93,6 +95,8 @@ namespace Restaurant_management
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.Ql2 = new System.Windows.Forms.NumericUpDown();
+            this.Apb2 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.Pl2 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -109,6 +113,8 @@ namespace Restaurant_management
             this.Dinner = new System.Windows.Forms.Button();
             this.Lunch = new System.Windows.Forms.Button();
             this.NavBarPanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.GoProfile = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -195,10 +201,6 @@ namespace Restaurant_management
             this.label40 = new System.Windows.Forms.Label();
             this.GoCart1 = new System.Windows.Forms.Button();
             this.LunchPanel = new System.Windows.Forms.Panel();
-            this.Ql2 = new System.Windows.Forms.NumericUpDown();
-            this.Apb2 = new System.Windows.Forms.Button();
-            this.Ql3 = new System.Windows.Forms.NumericUpDown();
-            this.Apb3 = new System.Windows.Forms.Button();
             this.DinnerPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -209,12 +211,14 @@ namespace Restaurant_management
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.Chicken_Biriyani.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ql1)).BeginInit();
@@ -241,8 +245,6 @@ namespace Restaurant_management
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.LunchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).BeginInit();
             this.SuspendLayout();
             // 
             // DinnerPanel
@@ -677,6 +679,26 @@ namespace Restaurant_management
             this.panel6.Size = new System.Drawing.Size(279, 164);
             this.panel6.TabIndex = 23;
             // 
+            // Ql3
+            // 
+            this.Ql3.Location = new System.Drawing.Point(102, 124);
+            this.Ql3.Name = "Ql3";
+            this.Ql3.Size = new System.Drawing.Size(57, 20);
+            this.Ql3.TabIndex = 8;
+            // 
+            // Apb3
+            // 
+            this.Apb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Apb3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apb3.ForeColor = System.Drawing.Color.Black;
+            this.Apb3.Location = new System.Drawing.Point(177, 120);
+            this.Apb3.Name = "Apb3";
+            this.Apb3.Size = new System.Drawing.Size(84, 28);
+            this.Apb3.TabIndex = 7;
+            this.Apb3.Text = "Add To Cart";
+            this.Apb3.UseVisualStyleBackColor = false;
+            this.Apb3.Click += new System.EventHandler(this.Apb3_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -936,6 +958,26 @@ namespace Restaurant_management
             this.panel9.Size = new System.Drawing.Size(279, 164);
             this.panel9.TabIndex = 24;
             // 
+            // Ql2
+            // 
+            this.Ql2.Location = new System.Drawing.Point(104, 122);
+            this.Ql2.Name = "Ql2";
+            this.Ql2.Size = new System.Drawing.Size(57, 20);
+            this.Ql2.TabIndex = 8;
+            // 
+            // Apb2
+            // 
+            this.Apb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Apb2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apb2.ForeColor = System.Drawing.Color.Black;
+            this.Apb2.Location = new System.Drawing.Point(179, 118);
+            this.Apb2.Name = "Apb2";
+            this.Apb2.Size = new System.Drawing.Size(84, 28);
+            this.Apb2.TabIndex = 7;
+            this.Apb2.Text = "Add To Cart";
+            this.Apb2.UseVisualStyleBackColor = false;
+            this.Apb2.Click += new System.EventHandler(this.Apb2_Click);
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -1092,7 +1134,7 @@ namespace Restaurant_management
             this.Lunch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Lunch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
             this.Lunch.ForeColor = System.Drawing.Color.Black;
-            this.Lunch.Location = new System.Drawing.Point(184, 37);
+            this.Lunch.Location = new System.Drawing.Point(302, 37);
             this.Lunch.Name = "Lunch";
             this.Lunch.Size = new System.Drawing.Size(108, 38);
             this.Lunch.TabIndex = 3;
@@ -1104,15 +1146,40 @@ namespace Restaurant_management
             // 
             this.NavBarPanel.BackColor = System.Drawing.Color.GhostWhite;
             this.NavBarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NavBarPanel.Controls.Add(this.panel10);
+            this.NavBarPanel.Controls.Add(this.GoProfile);
             this.NavBarPanel.Controls.Add(this.panel15);
             this.NavBarPanel.Controls.Add(this.Lunch);
             this.NavBarPanel.Controls.Add(this.Dinner);
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.NavBarPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NavBarPanel.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
             this.NavBarPanel.Size = new System.Drawing.Size(934, 100);
             this.NavBarPanel.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.Location = new System.Drawing.Point(26, 22);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(60, 64);
+            this.panel10.TabIndex = 33;
+            // 
+            // GoProfile
+            // 
+            this.GoProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.GoProfile.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
+            this.GoProfile.ForeColor = System.Drawing.Color.Black;
+            this.GoProfile.Location = new System.Drawing.Point(92, 24);
+            this.GoProfile.Name = "GoProfile";
+            this.GoProfile.Size = new System.Drawing.Size(128, 54);
+            this.GoProfile.TabIndex = 32;
+            this.GoProfile.Text = "Go to Profile";
+            this.GoProfile.UseVisualStyleBackColor = false;
+            this.GoProfile.Click += new System.EventHandler(this.GoProfile_Click);
             // 
             // panel15
             // 
@@ -2050,46 +2117,6 @@ namespace Restaurant_management
             this.LunchPanel.Size = new System.Drawing.Size(929, 681);
             this.LunchPanel.TabIndex = 23;
             // 
-            // Ql2
-            // 
-            this.Ql2.Location = new System.Drawing.Point(104, 122);
-            this.Ql2.Name = "Ql2";
-            this.Ql2.Size = new System.Drawing.Size(57, 20);
-            this.Ql2.TabIndex = 8;
-            // 
-            // Apb2
-            // 
-            this.Apb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Apb2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Apb2.ForeColor = System.Drawing.Color.Black;
-            this.Apb2.Location = new System.Drawing.Point(179, 118);
-            this.Apb2.Name = "Apb2";
-            this.Apb2.Size = new System.Drawing.Size(84, 28);
-            this.Apb2.TabIndex = 7;
-            this.Apb2.Text = "Add To Cart";
-            this.Apb2.UseVisualStyleBackColor = false;
-            this.Apb2.Click += new System.EventHandler(this.Apb2_Click);
-            // 
-            // Ql3
-            // 
-            this.Ql3.Location = new System.Drawing.Point(102, 124);
-            this.Ql3.Name = "Ql3";
-            this.Ql3.Size = new System.Drawing.Size(57, 20);
-            this.Ql3.TabIndex = 8;
-            // 
-            // Apb3
-            // 
-            this.Apb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Apb3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Apb3.ForeColor = System.Drawing.Color.Black;
-            this.Apb3.Location = new System.Drawing.Point(177, 120);
-            this.Apb3.Name = "Apb3";
-            this.Apb3.Size = new System.Drawing.Size(84, 28);
-            this.Apb3.TabIndex = 7;
-            this.Apb3.Text = "Add To Cart";
-            this.Apb3.UseVisualStyleBackColor = false;
-            this.Apb3.Click += new System.EventHandler(this.Apb3_Click);
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2118,6 +2145,7 @@ namespace Restaurant_management
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -2127,6 +2155,7 @@ namespace Restaurant_management
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.Chicken_Biriyani.ResumeLayout(false);
             this.Chicken_Biriyani.PerformLayout();
@@ -2164,8 +2193,6 @@ namespace Restaurant_management
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.LunchPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2340,5 +2367,7 @@ namespace Restaurant_management
         private System.Windows.Forms.Button Apb3;
         private System.Windows.Forms.NumericUpDown Ql2;
         private System.Windows.Forms.Button Apb2;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button GoProfile;
     }
 }
