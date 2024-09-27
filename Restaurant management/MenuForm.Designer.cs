@@ -69,14 +69,11 @@ namespace Restaurant_management
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button31 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.button32 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
+            this.Pl3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.Nl3 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -96,23 +93,19 @@ namespace Restaurant_management
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Pl2 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Nl2 = new System.Windows.Forms.Label();
+            this.Chicken_Biriyani = new System.Windows.Forms.Panel();
+            this.Ql1 = new System.Windows.Forms.NumericUpDown();
+            this.Apb1 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
+            this.Pl1 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.Nl1 = new System.Windows.Forms.Label();
             this.Dinner = new System.Windows.Forms.Button();
             this.Lunch = new System.Windows.Forms.Button();
             this.NavBarPanel = new System.Windows.Forms.Panel();
@@ -202,6 +195,10 @@ namespace Restaurant_management
             this.label40 = new System.Windows.Forms.Label();
             this.GoCart1 = new System.Windows.Forms.Button();
             this.LunchPanel = new System.Windows.Forms.Panel();
+            this.Ql2 = new System.Windows.Forms.NumericUpDown();
+            this.Apb2 = new System.Windows.Forms.Button();
+            this.Ql3 = new System.Windows.Forms.NumericUpDown();
+            this.Apb3 = new System.Windows.Forms.Button();
             this.DinnerPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,7 +216,8 @@ namespace Restaurant_management
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.Chicken_Biriyani.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.NavBarPanel.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -243,6 +241,8 @@ namespace Restaurant_management
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.LunchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).BeginInit();
             this.SuspendLayout();
             // 
             // DinnerPanel
@@ -258,7 +258,7 @@ namespace Restaurant_management
             this.DinnerPanel.Controls.Add(this.panel7);
             this.DinnerPanel.Controls.Add(this.panel8);
             this.DinnerPanel.Controls.Add(this.panel9);
-            this.DinnerPanel.Controls.Add(this.panel10);
+            this.DinnerPanel.Controls.Add(this.Chicken_Biriyani);
             this.DinnerPanel.Location = new System.Drawing.Point(0, 106);
             this.DinnerPanel.Name = "DinnerPanel";
             this.DinnerPanel.Size = new System.Drawing.Size(929, 681);
@@ -266,9 +266,9 @@ namespace Restaurant_management
             // 
             // GoCart2
             // 
-            this.GoCart2.BackColor = System.Drawing.Color.Black;
-            this.GoCart2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoCart2.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.GoCart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.GoCart2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
+            this.GoCart2.ForeColor = System.Drawing.Color.Black;
             this.GoCart2.Location = new System.Drawing.Point(700, 605);
             this.GoCart2.Name = "GoCart2";
             this.GoCart2.Size = new System.Drawing.Size(214, 54);
@@ -665,27 +665,17 @@ namespace Restaurant_management
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button31);
+            this.panel6.Controls.Add(this.Ql3);
+            this.panel6.Controls.Add(this.Apb3);
             this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.label63);
-            this.panel6.Controls.Add(this.button32);
-            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.Pl3);
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.Nl3);
             this.panel6.Location = new System.Drawing.Point(635, 18);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(279, 164);
             this.panel6.TabIndex = 23;
-            // 
-            // button31
-            // 
-            this.button31.Image = ((System.Drawing.Image)(resources.GetObject("button31.Image")));
-            this.button31.Location = new System.Drawing.Point(234, 121);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(27, 23);
-            this.button31.TabIndex = 52;
-            this.button31.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -698,34 +688,15 @@ namespace Restaurant_management
             this.label17.TabIndex = 5;
             this.label17.Text = "৳";
             // 
-            // label63
+            // Pl3
             // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(196, 121);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(21, 23);
-            this.label63.TabIndex = 51;
-            this.label63.Text = "0";
-            // 
-            // button32
-            // 
-            this.button32.Image = ((System.Drawing.Image)(resources.GetObject("button32.Image")));
-            this.button32.Location = new System.Drawing.Point(163, 120);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(27, 23);
-            this.button32.TabIndex = 50;
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(40, 121);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(32, 23);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "10";
+            this.Pl3.AutoSize = true;
+            this.Pl3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pl3.Location = new System.Drawing.Point(47, 121);
+            this.Pl3.Name = "Pl3";
+            this.Pl3.Size = new System.Drawing.Size(32, 23);
+            this.Pl3.TabIndex = 3;
+            this.Pl3.Text = "10";
             // 
             // pictureBox5
             // 
@@ -747,15 +718,15 @@ namespace Restaurant_management
             this.label19.TabIndex = 1;
             this.label19.Text = "Enjoy smoking mutton\r\nwith delicious tehari.";
             // 
-            // label20
+            // Nl3
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(103, 39);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(112, 19);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Mutton Tehari\r\n";
+            this.Nl3.AutoSize = true;
+            this.Nl3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nl3.Location = new System.Drawing.Point(103, 39);
+            this.Nl3.Name = "Nl3";
+            this.Nl3.Size = new System.Drawing.Size(112, 19);
+            this.Nl3.TabIndex = 0;
+            this.Nl3.Text = "Mutton Tehari\r\n";
             // 
             // panel7
             // 
@@ -953,27 +924,17 @@ namespace Restaurant_management
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.button7);
+            this.panel9.Controls.Add(this.Ql2);
+            this.panel9.Controls.Add(this.Apb2);
             this.panel9.Controls.Add(this.label29);
-            this.panel9.Controls.Add(this.label60);
-            this.panel9.Controls.Add(this.button8);
-            this.panel9.Controls.Add(this.label30);
+            this.panel9.Controls.Add(this.Pl2);
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label31);
-            this.panel9.Controls.Add(this.label32);
+            this.panel9.Controls.Add(this.Nl2);
             this.panel9.Location = new System.Drawing.Point(322, 18);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(279, 164);
             this.panel9.TabIndex = 24;
-            // 
-            // button7
-            // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(236, 121);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(27, 23);
-            this.button7.TabIndex = 43;
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // label29
             // 
@@ -986,34 +947,15 @@ namespace Restaurant_management
             this.label29.TabIndex = 5;
             this.label29.Text = "৳";
             // 
-            // label60
+            // Pl2
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(198, 121);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(21, 23);
-            this.label60.TabIndex = 42;
-            this.label60.Text = "0";
-            // 
-            // button8
-            // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(165, 120);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(27, 23);
-            this.button8.TabIndex = 41;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(40, 121);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 23);
-            this.label30.TabIndex = 3;
-            this.label30.Text = "10";
+            this.Pl2.AutoSize = true;
+            this.Pl2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pl2.Location = new System.Drawing.Point(44, 121);
+            this.Pl2.Name = "Pl2";
+            this.Pl2.Size = new System.Drawing.Size(43, 23);
+            this.Pl2.TabIndex = 3;
+            this.Pl2.Text = "250";
             // 
             // pictureBox8
             // 
@@ -1035,41 +977,51 @@ namespace Restaurant_management
             this.label31.TabIndex = 1;
             this.label31.Text = "Enjoy smoking Beef \r\nwith signature Biriyani.";
             // 
-            // label32
+            // Nl2
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(103, 39);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(102, 19);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Beef Biriyani";
+            this.Nl2.AutoSize = true;
+            this.Nl2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nl2.Location = new System.Drawing.Point(103, 39);
+            this.Nl2.Name = "Nl2";
+            this.Nl2.Size = new System.Drawing.Size(102, 19);
+            this.Nl2.TabIndex = 0;
+            this.Nl2.Text = "Beef Biriyani";
             // 
-            // panel10
+            // Chicken_Biriyani
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.button1);
-            this.panel10.Controls.Add(this.label33);
-            this.panel10.Controls.Add(this.label57);
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Controls.Add(this.label34);
-            this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Controls.Add(this.label35);
-            this.panel10.Controls.Add(this.label36);
-            this.panel10.Location = new System.Drawing.Point(13, 18);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(279, 164);
-            this.panel10.TabIndex = 22;
+            this.Chicken_Biriyani.BackColor = System.Drawing.Color.White;
+            this.Chicken_Biriyani.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Chicken_Biriyani.Controls.Add(this.Ql1);
+            this.Chicken_Biriyani.Controls.Add(this.Apb1);
+            this.Chicken_Biriyani.Controls.Add(this.label33);
+            this.Chicken_Biriyani.Controls.Add(this.Pl1);
+            this.Chicken_Biriyani.Controls.Add(this.pictureBox9);
+            this.Chicken_Biriyani.Controls.Add(this.label35);
+            this.Chicken_Biriyani.Controls.Add(this.Nl1);
+            this.Chicken_Biriyani.Location = new System.Drawing.Point(13, 18);
+            this.Chicken_Biriyani.Name = "Chicken_Biriyani";
+            this.Chicken_Biriyani.Size = new System.Drawing.Size(279, 164);
+            this.Chicken_Biriyani.TabIndex = 22;
             // 
-            // button1
+            // Ql1
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(231, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 23);
-            this.button1.TabIndex = 34;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Ql1.Location = new System.Drawing.Point(107, 124);
+            this.Ql1.Name = "Ql1";
+            this.Ql1.Size = new System.Drawing.Size(57, 20);
+            this.Ql1.TabIndex = 6;
+            // 
+            // Apb1
+            // 
+            this.Apb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Apb1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apb1.ForeColor = System.Drawing.Color.Black;
+            this.Apb1.Location = new System.Drawing.Point(182, 120);
+            this.Apb1.Name = "Apb1";
+            this.Apb1.Size = new System.Drawing.Size(84, 28);
+            this.Apb1.TabIndex = 5;
+            this.Apb1.Text = "Add To Cart";
+            this.Apb1.UseVisualStyleBackColor = false;
+            this.Apb1.Click += new System.EventHandler(this.Apb1_Click);
             // 
             // label33
             // 
@@ -1082,34 +1034,15 @@ namespace Restaurant_management
             this.label33.TabIndex = 5;
             this.label33.Text = "৳";
             // 
-            // label57
+            // Pl1
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(193, 121);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(21, 23);
-            this.label57.TabIndex = 33;
-            this.label57.Text = "0";
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(160, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 23);
-            this.button2.TabIndex = 32;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(40, 121);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 23);
-            this.label34.TabIndex = 3;
-            this.label34.Text = "10";
+            this.Pl1.AutoSize = true;
+            this.Pl1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pl1.Location = new System.Drawing.Point(40, 121);
+            this.Pl1.Name = "Pl1";
+            this.Pl1.Size = new System.Drawing.Size(43, 23);
+            this.Pl1.TabIndex = 3;
+            this.Pl1.Text = "170";
             // 
             // pictureBox9
             // 
@@ -1131,15 +1064,15 @@ namespace Restaurant_management
             this.label35.TabIndex = 1;
             this.label35.Text = "Enjoy smoking Chicken \r\nwith signature Biriyani.";
             // 
-            // label36
+            // Nl1
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(103, 39);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(134, 19);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Chicken Biriyani";
+            this.Nl1.AutoSize = true;
+            this.Nl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nl1.Location = new System.Drawing.Point(103, 39);
+            this.Nl1.Name = "Nl1";
+            this.Nl1.Size = new System.Drawing.Size(134, 19);
+            this.Nl1.TabIndex = 0;
+            this.Nl1.Text = "Chicken Biriyani";
             // 
             // Dinner
             // 
@@ -1180,7 +1113,6 @@ namespace Restaurant_management
             this.NavBarPanel.Name = "NavBarPanel";
             this.NavBarPanel.Size = new System.Drawing.Size(934, 100);
             this.NavBarPanel.TabIndex = 0;
-            this.NavBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.NavBarPanel_Paint);
             // 
             // panel15
             // 
@@ -2118,6 +2050,46 @@ namespace Restaurant_management
             this.LunchPanel.Size = new System.Drawing.Size(929, 681);
             this.LunchPanel.TabIndex = 23;
             // 
+            // Ql2
+            // 
+            this.Ql2.Location = new System.Drawing.Point(104, 122);
+            this.Ql2.Name = "Ql2";
+            this.Ql2.Size = new System.Drawing.Size(57, 20);
+            this.Ql2.TabIndex = 8;
+            // 
+            // Apb2
+            // 
+            this.Apb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Apb2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apb2.ForeColor = System.Drawing.Color.Black;
+            this.Apb2.Location = new System.Drawing.Point(179, 118);
+            this.Apb2.Name = "Apb2";
+            this.Apb2.Size = new System.Drawing.Size(84, 28);
+            this.Apb2.TabIndex = 7;
+            this.Apb2.Text = "Add To Cart";
+            this.Apb2.UseVisualStyleBackColor = false;
+            this.Apb2.Click += new System.EventHandler(this.Apb2_Click);
+            // 
+            // Ql3
+            // 
+            this.Ql3.Location = new System.Drawing.Point(102, 124);
+            this.Ql3.Name = "Ql3";
+            this.Ql3.Size = new System.Drawing.Size(57, 20);
+            this.Ql3.TabIndex = 8;
+            // 
+            // Apb3
+            // 
+            this.Apb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Apb3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apb3.ForeColor = System.Drawing.Color.Black;
+            this.Apb3.Location = new System.Drawing.Point(177, 120);
+            this.Apb3.Name = "Apb3";
+            this.Apb3.Size = new System.Drawing.Size(84, 28);
+            this.Apb3.TabIndex = 7;
+            this.Apb3.Text = "Add To Cart";
+            this.Apb3.UseVisualStyleBackColor = false;
+            this.Apb3.Click += new System.EventHandler(this.Apb3_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2126,8 +2098,8 @@ namespace Restaurant_management
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 787);
             this.Controls.Add(this.NavBarPanel);
-            this.Controls.Add(this.LunchPanel);
             this.Controls.Add(this.DinnerPanel);
+            this.Controls.Add(this.LunchPanel);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
@@ -2156,8 +2128,9 @@ namespace Restaurant_management
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.Chicken_Biriyani.ResumeLayout(false);
+            this.Chicken_Biriyani.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.NavBarPanel.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -2191,6 +2164,8 @@ namespace Restaurant_management
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.LunchPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Ql2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ql3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2223,10 +2198,10 @@ namespace Restaurant_management
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Pl3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label Nl3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
@@ -2241,16 +2216,16 @@ namespace Restaurant_management
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label Pl2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label Nl2;
+        private System.Windows.Forms.Panel Chicken_Biriyani;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label Pl1;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label Nl1;
         private System.Windows.Forms.Button GoCart2;
         private System.Windows.Forms.Button Dinner;
         private System.Windows.Forms.Button Lunch;
@@ -2267,21 +2242,12 @@ namespace Restaurant_management
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel chickenSandwich;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label quantity;
@@ -2368,5 +2334,11 @@ namespace Restaurant_management
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Button Apb1;
+        private System.Windows.Forms.NumericUpDown Ql1;
+        private System.Windows.Forms.NumericUpDown Ql3;
+        private System.Windows.Forms.Button Apb3;
+        private System.Windows.Forms.NumericUpDown Ql2;
+        private System.Windows.Forms.Button Apb2;
     }
 }

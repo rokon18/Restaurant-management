@@ -17,14 +17,14 @@ namespace Restaurant_management
 
     public partial class AddProduct : Form
     {
-        private TestForm menuForm;
+        private MenuForm menuForm;
 
         public AddProduct()
         {
             InitializeComponent();
             //LoadProductTable();
             ConfigureDataGridView();
-            menuForm = new TestForm();
+            menuForm = new MenuForm();
 
         }
 
@@ -85,7 +85,7 @@ namespace Restaurant_management
         {
             if (addedPanel != null)
             {
-                menuForm = new TestForm();
+                menuForm = new MenuForm();
                 menuForm.Controls.Add(addedPanel);
                 menuForm.Show();
             }

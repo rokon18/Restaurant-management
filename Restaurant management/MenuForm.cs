@@ -12,12 +12,17 @@ namespace Restaurant_management
 {
     public partial class MenuForm : Form
     {
+
+        private CartPage cartPage;
+
         public MenuForm()
         {
             InitializeComponent();
+            cartPage = new CartPage();
+            cartPage.Tag = this;  // Pass the reference of MenuForm to CartPage
         }
 
-        
+
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
@@ -58,75 +63,102 @@ namespace Restaurant_management
             DinnerPanel.BringToFront(); 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label72_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label108_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label72_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label90_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LunchPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void GoCart1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CartPage cartPage = new CartPage();
-            cartPage.Show();
+            cartPage.Show();  
         }
 
         private void GoCart2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CartPage cartPage = new CartPage();
-            cartPage.Show();
+            cartPage.Show();  
         }
 
-        private void NavBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         
+        //Dinner Panel Add to Cart Buttons
+        private void Apb1_Click(object sender, EventArgs e)
+        {
+            // Assuming the product details (name, price, and quantity) are within the panel controls
+            Button addButton = (Button)sender;
+            Panel productPanel = (Panel)addButton.Parent;  // Get the parent panel of the clicked button
+
+            // Find the controls in the panel to retrieve the product details
+            Label productNameLabel = (Label)productPanel.Controls["Nl1"];  // Assume the label for product name is "Nl1"
+            Label productPriceLabel = (Label)productPanel.Controls["Pl1"];  // Assume the label for product price is "Pl1"
+            NumericUpDown productQuantity = (NumericUpDown)productPanel.Controls["Ql1"];  // Assume quantity is selected using a NumericUpDown control
+
+            string productName = productNameLabel.Text;
+            decimal price = Convert.ToDecimal(productPriceLabel.Text);
+            int quantity = Convert.ToInt32(productQuantity.Value);
+
+
+            if (quantity > 0)
+            {
+                cartPage.AddProductToCart(productName, price, quantity);  // Add the product to the cart
+                
+            }
+            else
+            {
+                MessageBox.Show("Quantity must be greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Apb2_Click(object sender, EventArgs e)
+        {
+            // Assuming the product details (name, price, and quantity) are within the panel controls
+            Button addButton = (Button)sender;
+            Panel productPanel = (Panel)addButton.Parent;  // Get the parent panel of the clicked button
+
+            // Find the controls in the panel to retrieve the product details
+            Label productNameLabel = (Label)productPanel.Controls["Nl2"];  // Assume the label for product name is "Nl1"
+            Label productPriceLabel = (Label)productPanel.Controls["Pl2"];  // Assume the label for product price is "Pl1"
+            NumericUpDown productQuantity = (NumericUpDown)productPanel.Controls["Ql2"];  // Assume quantity is selected using a NumericUpDown control
+
+            string productName = productNameLabel.Text;
+            decimal price = Convert.ToDecimal(productPriceLabel.Text);
+            int quantity = Convert.ToInt32(productQuantity.Value);
+
+
+            if (quantity > 0)
+            {
+                cartPage.AddProductToCart(productName, price, quantity);  // Add the product to the cart
+                
+            }
+            else
+            {
+                MessageBox.Show("Quantity must be greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Apb3_Click(object sender, EventArgs e)
+        {
+            // Assuming the product details (name, price, and quantity) are within the panel controls
+            Button addButton = (Button)sender;
+            Panel productPanel = (Panel)addButton.Parent;  // Get the parent panel of the clicked button
+
+            // Find the controls in the panel to retrieve the product details
+            Label productNameLabel = (Label)productPanel.Controls["Nl3"];  // Assume the label for product name is "Nl1"
+            Label productPriceLabel = (Label)productPanel.Controls["Pl3"];  // Assume the label for product price is "Pl1"
+            NumericUpDown productQuantity = (NumericUpDown)productPanel.Controls["Ql3"];  // Assume quantity is selected using a NumericUpDown control
+
+            string productName = productNameLabel.Text;
+            decimal price = Convert.ToDecimal(productPriceLabel.Text);
+            int quantity = Convert.ToInt32(productQuantity.Value);
+
+
+            if (quantity > 0)
+            {
+                cartPage.AddProductToCart(productName, price, quantity);  // Add the product to the cart
+                 
+            }
+            else
+            {
+                MessageBox.Show("Quantity must be greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
