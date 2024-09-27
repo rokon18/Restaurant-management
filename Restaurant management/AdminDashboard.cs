@@ -72,6 +72,12 @@ namespace Restaurant_management
 
         }
 
-       
+        private void btnadminchangepasss_Click(object sender, EventArgs e)
+        {
+            Changepassword ch = new Changepassword();
+            Login.stack.Push(this);
+            this.Hide();
+            ch.ShowDialog();
+        }
     }
 }

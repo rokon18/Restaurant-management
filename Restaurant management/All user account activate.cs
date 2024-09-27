@@ -22,7 +22,7 @@ namespace Restaurant_management
         {
             try
             {
-                string query = "SELECT Username, Email, Contactno, Role, Status FROM SignupTable WHERE Role = 'Customer'";
+                string query = "SELECT Username, Email, Contactno, Role, Status FROM SignupTable WHERE Role IN ('Admin', 'Manager', 'Customer')";
                 DataTable dt = con.GetData(query);
 
                 // Create a new DataTable to hold the modified data
