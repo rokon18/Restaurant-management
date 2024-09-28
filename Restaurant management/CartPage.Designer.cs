@@ -53,10 +53,9 @@ namespace Restaurant_management
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 86);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 56);
+            this.label1.Size = new System.Drawing.Size(83, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cart";
             // 
@@ -75,10 +74,9 @@ namespace Restaurant_management
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(842, 163);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(561, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 351);
+            this.panel1.Size = new System.Drawing.Size(341, 229);
             this.panel1.TabIndex = 1;
             // 
             // ApplyPromo
@@ -86,10 +84,9 @@ namespace Restaurant_management
             this.ApplyPromo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ApplyPromo.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyPromo.ForeColor = System.Drawing.Color.Black;
-            this.ApplyPromo.Location = new System.Drawing.Point(372, 128);
-            this.ApplyPromo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ApplyPromo.Location = new System.Drawing.Point(248, 83);
             this.ApplyPromo.Name = "ApplyPromo";
-            this.ApplyPromo.Size = new System.Drawing.Size(104, 45);
+            this.ApplyPromo.Size = new System.Drawing.Size(69, 29);
             this.ApplyPromo.TabIndex = 33;
             this.ApplyPromo.Text = "Apply";
             this.ApplyPromo.UseVisualStyleBackColor = false;
@@ -97,21 +94,19 @@ namespace Restaurant_management
             // 
             // DiscountTextBox
             // 
-            this.DiscountTextBox.Location = new System.Drawing.Point(238, 135);
-            this.DiscountTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DiscountTextBox.Location = new System.Drawing.Point(159, 88);
             this.DiscountTextBox.Name = "DiscountTextBox";
-            this.DiscountTextBox.Size = new System.Drawing.Size(114, 26);
+            this.DiscountTextBox.Size = new System.Drawing.Size(77, 20);
             this.DiscountTextBox.TabIndex = 14;
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.Font = new System.Drawing.Font("Arial", 18F);
+            this.button9.Font = new System.Drawing.Font("Helvetica", 18F);
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(42, 265);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9.Location = new System.Drawing.Point(28, 172);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(452, 72);
+            this.button9.Size = new System.Drawing.Size(301, 47);
             this.button9.TabIndex = 3;
             this.button9.Text = "Checkout Now";
             this.button9.UseVisualStyleBackColor = false;
@@ -121,10 +116,9 @@ namespace Restaurant_management
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(354, 212);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(236, 138);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 36);
+            this.label8.Size = new System.Drawing.Size(24, 23);
             this.label8.TabIndex = 11;
             this.label8.Text = "৳";
             // 
@@ -132,22 +126,20 @@ namespace Restaurant_management
             // 
             this.GrandTotal.AutoSize = true;
             this.GrandTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotal.Location = new System.Drawing.Point(394, 212);
-            this.GrandTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GrandTotal.Location = new System.Drawing.Point(263, 138);
             this.GrandTotal.Name = "GrandTotal";
-            this.GrandTotal.Size = new System.Drawing.Size(71, 36);
+            this.GrandTotal.Size = new System.Drawing.Size(32, 23);
             this.GrandTotal.TabIndex = 10;
-            this.GrandTotal.Text = "0.00";
+            this.GrandTotal.Text = "10";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label33.Location = new System.Drawing.Point(354, 52);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(236, 34);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(35, 36);
+            this.label33.Size = new System.Drawing.Size(24, 23);
             this.label33.TabIndex = 9;
             this.label33.Text = "৳";
             // 
@@ -155,56 +147,51 @@ namespace Restaurant_management
             // 
             this.SubTotal.AutoSize = true;
             this.SubTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTotal.Location = new System.Drawing.Point(394, 52);
-            this.SubTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SubTotal.Location = new System.Drawing.Point(263, 34);
             this.SubTotal.Name = "SubTotal";
-            this.SubTotal.Size = new System.Drawing.Size(71, 36);
+            this.SubTotal.Size = new System.Drawing.Size(32, 23);
             this.SubTotal.TabIndex = 8;
-            this.SubTotal.Text = "0.00";
+            this.SubTotal.Text = "10";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(42, 192);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(28, 125);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 0);
+            this.panel3.Size = new System.Drawing.Size(301, 1);
             this.panel3.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(46, 212);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(31, 138);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 33);
+            this.label7.Size = new System.Drawing.Size(110, 22);
             this.label7.TabIndex = 6;
             this.label7.Text = "Grand Total";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(46, 129);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(31, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 33);
+            this.label6.Size = new System.Drawing.Size(86, 22);
             this.label6.TabIndex = 5;
             this.label6.Text = "Discount";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(46, 52);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(31, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 33);
+            this.label5.Size = new System.Drawing.Size(81, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "Subtotal";
             // 
@@ -213,10 +200,9 @@ namespace Restaurant_management
             this.GoMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.GoMenu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
             this.GoMenu.ForeColor = System.Drawing.Color.Black;
-            this.GoMenu.Location = new System.Drawing.Point(1032, 18);
-            this.GoMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GoMenu.Location = new System.Drawing.Point(688, 12);
             this.GoMenu.Name = "GoMenu";
-            this.GoMenu.Size = new System.Drawing.Size(321, 83);
+            this.GoMenu.Size = new System.Drawing.Size(214, 54);
             this.GoMenu.TabIndex = 32;
             this.GoMenu.Text = "Go Back to Menu";
             this.GoMenu.UseVisualStyleBackColor = false;
@@ -231,12 +217,10 @@ namespace Restaurant_management
             this.dataGridViewCart.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCart.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewCart.Location = new System.Drawing.Point(28, 163);
-            this.dataGridViewCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewCart.Location = new System.Drawing.Point(19, 106);
             this.dataGridViewCart.Name = "dataGridViewCart";
             this.dataGridViewCart.ReadOnly = true;
-            this.dataGridViewCart.RowHeadersWidth = 62;
-            this.dataGridViewCart.Size = new System.Drawing.Size(774, 749);
+            this.dataGridViewCart.Size = new System.Drawing.Size(516, 487);
             this.dataGridViewCart.TabIndex = 3;
             this.dataGridViewCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellContentClick);
             this.dataGridViewCart.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellValueChanged);
@@ -246,26 +230,25 @@ namespace Restaurant_management
             this.ExportToPdfButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ExportToPdfButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
             this.ExportToPdfButton.ForeColor = System.Drawing.Color.Black;
-            this.ExportToPdfButton.Location = new System.Drawing.Point(1032, 829);
-            this.ExportToPdfButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ExportToPdfButton.Location = new System.Drawing.Point(688, 539);
             this.ExportToPdfButton.Name = "ExportToPdfButton";
-            this.ExportToPdfButton.Size = new System.Drawing.Size(321, 83);
+            this.ExportToPdfButton.Size = new System.Drawing.Size(214, 54);
             this.ExportToPdfButton.TabIndex = 33;
             this.ExportToPdfButton.Text = "Print PDF";
             this.ExportToPdfButton.UseVisualStyleBackColor = false;
+            this.ExportToPdfButton.Click += new System.EventHandler(this.ExportToPdfButton_Click);
             // 
             // CartPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1371, 951);
+            this.ClientSize = new System.Drawing.Size(914, 618);
             this.Controls.Add(this.ExportToPdfButton);
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.GoMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CartPage";
             this.Text = "CartPage";
             this.panel1.ResumeLayout(false);

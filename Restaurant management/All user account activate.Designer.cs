@@ -46,7 +46,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 378);
             this.dataGridView1.TabIndex = 0;
             // 
             // customerpanel
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 577);
+            this.ClientSize = new System.Drawing.Size(1010, 598);
             this.Controls.Add(this.btnDeactivate);
             this.Controls.Add(this.btnActivate);
             this.Controls.Add(this.pictureBox1);

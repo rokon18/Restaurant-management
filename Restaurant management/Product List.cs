@@ -118,7 +118,7 @@ namespace Restaurant_management
                             textBoxpname.Clear();
                             textBoxPRICE.Clear();
                             comboBox1.SelectedIndex = -1;
-                            textBox1.Text = "1"; // Reset the quantity TextBox
+                            textBox1.Text = "0"; // Reset the quantity TextBox
                             pictureBox1.Image = null;  // Clear the picture box
 
                             // Reload the product data into DataGridView after adding a new product
@@ -169,7 +169,7 @@ namespace Restaurant_management
             }
         }
 
-        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Check if the clicked cell is a valid data cell
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -218,17 +218,17 @@ namespace Restaurant_management
 
             try
             {
-           
-            // Convert the image to a byte array
-            byte[] imageBytes = null;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                imageBytes = ms.ToArray();
-            }
 
-            // SQL query for updating the product
-            string query = "UPDATE Products SET ProductName = @ProductName, Category = @Category, Quantity = @Quantity, Price = @Price, ProductImage = @ProductImage WHERE ProductID = @ProductID";
+                // Convert the image to a byte array
+                //byte[] imageBytes = null;
+                //using (MemoryStream ms = new MemoryStream())
+                //{
+                //    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                //    imageBytes = ms.ToArray();
+                //}
+
+                // SQL query for updating the product
+                string query = "UPDATE Products SET ProductName = @ProductName, Category = @Category, Quantity = @Quantity, Price = @Price WHERE ProductID = @ProductID";
 
                 // Connection string (replace with your actual database connection string)
                 string connectionString = "Data Source=MSI;Initial Catalog=RMS;Integrated Security=True;";
@@ -248,7 +248,7 @@ namespace Restaurant_management
                             cmd.Parameters.AddWithValue("@Category", comboBox1.SelectedItem.ToString());
                             cmd.Parameters.AddWithValue("@Quantity", quantity);
                             cmd.Parameters.AddWithValue("@Price", price);
-                            cmd.Parameters.AddWithValue("@ProductImage", imageBytes);
+                           // cmd.Parameters.AddWithValue("@ProductImage", imageBytes);
                             cmd.Parameters.AddWithValue("@ProductID", productId); // Ensure to include the ProductID in the update command
                             conn.Open();
                             // Execute the query
@@ -354,5 +354,8 @@ namespace Restaurant_management
                 previousForm.Show();
             }
         }
+
+      
+       
     }
 }

@@ -154,8 +154,8 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(768, 402);
             this.dataGridView1.TabIndex = 11;
-            dataGridView1.CellClick += DataGridView1_CellClick;
-
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // buttonadd
             // 
             this.buttonadd.BackColor = System.Drawing.Color.LimeGreen;
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 693);
+            this.ClientSize = new System.Drawing.Size(1018, 690);
             this.Controls.Add(this.labelPRICE);
             this.Controls.Add(this.textBoxPRICE);
             this.Controls.Add(this.pictureBox2);

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using iTextSharp.text;
-//using iTextSharp.text.pdf;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.IO;
 
 namespace Restaurant_management
@@ -94,7 +94,7 @@ namespace Restaurant_management
 
             // Update the SubTotal after adding or updating the product
             UpdateSubTotal();
-
+            
         }
 
 
@@ -154,8 +154,8 @@ namespace Restaurant_management
                 subTotal += rowTotal;
             }
 
-
-           SubTotal.Text = subTotal.ToString("0.00");
+            
+            SubTotal.Text = subTotal.ToString("0.00");
 
             GrandTotal.Text = subTotal.ToString("0.00");
         }
@@ -202,13 +202,163 @@ namespace Restaurant_management
             DiscountTextBox.Clear();
         }
 
+
+
         private void GoMenu_Click(object sender, EventArgs e)
         {
+            this.Hide();  // Hide the CartPage
+            MenuList menulist = (MenuList)this.Tag;  // Retrieve the MenuList instance passed through Tag property
+            menulist.Show();  // Show the MenuForm
+        }
+
+        private void ExportToPdfButton_Click(object sender, EventArgs e)
+        {
+            // Show save file dialog to get the file name and location
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Files|*.pdf";
+            saveFileDialog.Title = "Save as PDF";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                this.Hide();  // Hide the CartPage
-                MenuList menulist = (MenuList)this.Tag;  // Retrieve the MenuList instance passed through Tag property
-                menulist.Show();  // Show the MenuForm
+                // Call the export method and pass the chosen file name
+                ExportDataGridViewToPDF(saveFileDialog.FileName);
             }
         }
+
+
+
+
+        private void ExportDataGridViewToPDF(string fileName)
+        {
+            // Create a new PDF document
+            Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 10f);
+
+            try
+            {
+                // Create the PDF writer
+                PdfWriter.GetInstance(pdfDoc, new FileStream(fileName, FileMode.Create));
+
+                // Open the PDF document
+                pdfDoc.Open();
+
+                // Create a font for the table text
+                iTextSharp.text.Font font = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+
+                // Create a table with the same number of columns as DataGridView, excluding the "Remove" button column
+                PdfPTable pdfTable = new PdfPTable(dataGridViewCart.ColumnCount - 1); // Assuming RemoveColumn is the last one, so we exclude it
+                pdfTable.WidthPercentage = 100;
+
+                // Add headers to the table (skip the "Remove" button column)
+                foreach (DataGridViewColumn column in dataGridViewCart.Columns)
+                {
+                    if (column.Name != "RemoveColumn") // Skip the "Remove" column
+                    {
+                        PdfPCell headerCell = new PdfPCell(new Phrase(column.HeaderText, font))
+                        {
+                            HorizontalAlignment = Element.ALIGN_CENTER
+                        };
+                        pdfTable.AddCell(headerCell);
+                    }
+                }
+
+                // Add DataGridView rows to the table (skip the "Remove" button column)
+                foreach (DataGridViewRow row in dataGridViewCart.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (dataGridViewCart.Columns[cell.ColumnIndex].Name != "RemoveColumn") // Skip the "Remove" column
+                        {
+                            PdfPCell pdfCell = new PdfPCell(new Phrase(cell.Value?.ToString(), font))
+                            {
+                                HorizontalAlignment = Element.ALIGN_CENTER
+                            };
+                            pdfTable.AddCell(pdfCell);
+                        }
+                    }
+                }
+
+                // Add the main product table to the document
+                pdfDoc.Add(pdfTable);
+
+                // Create a separate table for Subtotal, Discount, and Grand Total
+                PdfPTable summaryTable = new PdfPTable(2); // 2 columns: one for labels and one for values
+                summaryTable.WidthPercentage = 40; // Adjust the width of the summary table as needed
+                summaryTable.HorizontalAlignment = Element.ALIGN_RIGHT; // Align it to the right side of the page
+
+                // Add the Subtotal row
+                PdfPCell subTotalLabelCell = new PdfPCell(new Phrase("Subtotal:", font))
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                PdfPCell subTotalValueCell = new PdfPCell(new Phrase(SubTotal.Text, font))
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                summaryTable.AddCell(subTotalLabelCell);
+                summaryTable.AddCell(subTotalValueCell);
+
+                // Add the Discount row
+                PdfPCell discountLabelCell = new PdfPCell(new Phrase("Discount:", font))
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                PdfPCell discountValueCell = new PdfPCell(new Phrase(DiscountTextBox.Text, font)) // Assuming DiscountTextBox.Text holds the discount amount
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                summaryTable.AddCell(discountLabelCell);
+                summaryTable.AddCell(discountValueCell);
+
+                // Add the Grand Total row
+                PdfPCell grandTotalLabelCell = new PdfPCell(new Phrase("Grand Total:", font))
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                PdfPCell grandTotalValueCell = new PdfPCell(new Phrase(GrandTotal.Text, font))
+                {
+                    Border = iTextSharp.text.Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_RIGHT
+                };
+                summaryTable.AddCell(grandTotalLabelCell);
+                summaryTable.AddCell(grandTotalValueCell);
+
+                // Add a border around the entire summary table
+                PdfPCell summaryBoxCell = new PdfPCell(summaryTable)
+                {
+                    Colspan = 2,
+                    Border = iTextSharp.text.Rectangle.BOX,
+                    Padding = 10f
+                };
+
+                PdfPTable boxedSummaryTable = new PdfPTable(1); // 1 column to contain the summary table
+                boxedSummaryTable.WidthPercentage = 40; // Adjust the width
+                boxedSummaryTable.HorizontalAlignment = Element.ALIGN_RIGHT;
+                boxedSummaryTable.AddCell(summaryBoxCell);
+
+                // Add the boxed summary table to the document
+                pdfDoc.Add(boxedSummaryTable);
+
+                // Success message
+                MessageBox.Show("Data exported successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while exporting to PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Close the document
+                pdfDoc.Close();
+            }
+        }
+
+
+
+
     }
 }
