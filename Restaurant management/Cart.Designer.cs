@@ -33,7 +33,7 @@ namespace Restaurant_management
             this.panel1 = new System.Windows.Forms.Panel();
             this.ApplyPromo = new System.Windows.Forms.Button();
             this.DiscountTextBox = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button9chkout = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.GrandTotal = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -44,7 +44,6 @@ namespace Restaurant_management
             this.label5 = new System.Windows.Forms.Label();
             this.GoMenu = new System.Windows.Forms.Button();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
-            this.ExportToPdfButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +65,7 @@ namespace Restaurant_management
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ApplyPromo);
             this.panel1.Controls.Add(this.DiscountTextBox);
-            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.button9chkout);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.GrandTotal);
             this.panel1.Controls.Add(this.label33);
@@ -103,18 +102,19 @@ namespace Restaurant_management
             this.DiscountTextBox.Size = new System.Drawing.Size(114, 26);
             this.DiscountTextBox.TabIndex = 14;
             // 
-            // button9
+            // button9chkout
             // 
-            this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.Font = new System.Drawing.Font("Arial", 18F);
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(42, 265);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(452, 72);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Checkout Now";
-            this.button9.UseVisualStyleBackColor = false;
+            this.button9chkout.BackColor = System.Drawing.Color.Black;
+            this.button9chkout.Font = new System.Drawing.Font("Arial", 18F);
+            this.button9chkout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9chkout.Location = new System.Drawing.Point(42, 265);
+            this.button9chkout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9chkout.Name = "button9chkout";
+            this.button9chkout.Size = new System.Drawing.Size(452, 72);
+            this.button9chkout.TabIndex = 3;
+            this.button9chkout.Text = "Checkout Now";
+            this.button9chkout.UseVisualStyleBackColor = false;
+            this.button9chkout.Click += new System.EventHandler(this.button9chkout_Click);
             // 
             // label8
             // 
@@ -241,26 +241,12 @@ namespace Restaurant_management
             this.dataGridViewCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellContentClick);
             this.dataGridViewCart.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellValueChanged);
             // 
-            // ExportToPdfButton
-            // 
-            this.ExportToPdfButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ExportToPdfButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
-            this.ExportToPdfButton.ForeColor = System.Drawing.Color.Black;
-            this.ExportToPdfButton.Location = new System.Drawing.Point(1032, 829);
-            this.ExportToPdfButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ExportToPdfButton.Name = "ExportToPdfButton";
-            this.ExportToPdfButton.Size = new System.Drawing.Size(321, 83);
-            this.ExportToPdfButton.TabIndex = 33;
-            this.ExportToPdfButton.Text = "Print PDF";
-            this.ExportToPdfButton.UseVisualStyleBackColor = false;
-            // 
             // CartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1371, 951);
-            this.Controls.Add(this.ExportToPdfButton);
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.GoMenu);
             this.Controls.Add(this.panel1);
@@ -288,11 +274,10 @@ namespace Restaurant_management
         private System.Windows.Forms.Label GrandTotal;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label SubTotal;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button9chkout;
         private System.Windows.Forms.Button GoMenu;
         private System.Windows.Forms.DataGridView dataGridViewCart;
         private System.Windows.Forms.TextBox DiscountTextBox;
         private System.Windows.Forms.Button ApplyPromo;
-        private System.Windows.Forms.Button ExportToPdfButton;
     }
 }

@@ -105,10 +105,7 @@ namespace Restaurant_management
             if (e.ColumnIndex == dataGridViewCart.Columns["RemoveColumn"].Index && e.RowIndex >= 0)
             {
                 // Confirm if the user wants to remove the product
-                DialogResult result = MessageBox.Show("Are you sure you want to remove this product?",
-                                                      "Remove Product",
-                                                      MessageBoxButtons.YesNo,
-                                                      MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to remove this product?",  "Remove Product",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
                 // If user confirms, remove the row
                 if (result == DialogResult.Yes)
@@ -209,6 +206,24 @@ namespace Restaurant_management
                 MenuList menulist = (MenuList)this.Tag;  // Retrieve the MenuList instance passed through Tag property
                 menulist.Show();  // Show the MenuForm
             }
+        }
+        public void ClearCart()
+        {
+            dataGridViewCart.Rows.Clear();  // Clear all rows in the DataGridView
+            UpdateSubTotal();  // Reset the subtotal and grand total labels
+        }
+        
+
+        private void button9chkout_Click(object sender, EventArgs e)
+        {
+            
+
+            // Assuming GrandTotal is a label that holds the grand total amount
+            decimal grandTotal = decimal.Parse(GrandTotal.Text); // Get the grand total value
+            Payment paymentForm = new Payment(grandTotal, this); ;
+            paymentForm.Show(); // Show the Payment form
+            // Show the payment form
+            
         }
     }
 }

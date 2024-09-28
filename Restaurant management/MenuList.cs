@@ -203,8 +203,15 @@ namespace Restaurant_management
             cartPage.Show();
         }
 
-        
+        private void GoProfile_Click(object sender, EventArgs e)
+        {
+            if (Login.stack.Count > 0)
+            {
+                Form previousForm = Login.stack.Pop();
+                this.Hide();
+                previousForm.Show();
+            }
 
-
+        }
     }
 }
