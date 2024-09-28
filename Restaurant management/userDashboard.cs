@@ -55,5 +55,14 @@ namespace Restaurant_management
                 log.ShowDialog();
             }
         }
+
+        private void Orderbutton_Click(object sender, EventArgs e)
+        {
+            MenuList Ml = new MenuList();
+            Login.stack.Push(this);
+            this.Hide();
+            Ml.ShowDialog();
+
+        }
     }
 }
