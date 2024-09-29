@@ -25,9 +25,9 @@ namespace Restaurant_management
 
 
                 Login log = new Login();
-                Login.stack.Push(this);
+        
                 this.Hide();
-                log.ShowDialog();
+                log.Show();
             }
         }
 
@@ -47,7 +47,7 @@ namespace Restaurant_management
                 Changepassword ch = new Changepassword();
                 Login.stack.Push(this);
                 this.Hide();
-                ch.ShowDialog();
+                ch.Show();
             
         }
 
@@ -56,7 +56,7 @@ namespace Restaurant_management
             Product_List PL = new Product_List();
             Login.stack.Push(this);
             this.Hide();
-            PL.ShowDialog();
+            PL.Show();
         }
 
         private void btndeProduct_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace Restaurant_management
             Product_List PL = new Product_List();
             Login.stack.Push(this);
             this.Hide();
-            PL.ShowDialog();
+            PL.Show();
         }
     }
 }

@@ -47,20 +47,20 @@ namespace Restaurant_management
 
         private void Logoutbutton_Click(object sender, EventArgs e)
         {
-            if (Login.stack.Count > 0)
-            {
+           
+            
 
                 DialogResult result = MessageBox.Show("Do you want to close this application ?", "closing window", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
 
 
-                    Login log = new Login();
-                    Login.stack.Push(this);
+                   Login log = new Login();
+                    
                     this.Hide();
-                    log.ShowDialog();
+                    log.Show();
                 }
-            }
+            
         }
 
 
@@ -68,9 +68,9 @@ namespace Restaurant_management
         private void btnadminchangepasss_Click(object sender, EventArgs e)
         {
             Changepassword ch = new Changepassword();
-            Login.stack.Push(this);
+          //  Login.stack.Push(this);
             this.Hide();
-            ch.ShowDialog();
+            ch.Show();
         }
     }
 }

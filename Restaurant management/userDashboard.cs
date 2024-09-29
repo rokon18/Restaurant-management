@@ -50,9 +50,9 @@ namespace Restaurant_management
 
 
                 Login log = new Login();
-                Login.stack.Push(this);
+               
                 this.Hide();
-                log.ShowDialog();
+                log.Show();
             }
         }
 
@@ -61,7 +61,7 @@ namespace Restaurant_management
             MenuList Ml = new MenuList();
             Login.stack.Push(this);
             this.Hide();
-            Ml.ShowDialog();
+            Ml.Show();
 
         }
     }

@@ -81,10 +81,10 @@
             this.GoProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.GoProfile.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
             this.GoProfile.ForeColor = System.Drawing.Color.Black;
-            this.GoProfile.Location = new System.Drawing.Point(25, 34);
+            this.GoProfile.Location = new System.Drawing.Point(22, 45);
             this.GoProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoProfile.Name = "GoProfile";
-            this.GoProfile.Size = new System.Drawing.Size(192, 83);
+            this.GoProfile.Size = new System.Drawing.Size(175, 63);
             this.GoProfile.TabIndex = 34;
             this.GoProfile.Text = "    Go to Profile";
             this.GoProfile.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Restaurant_management.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             // 
             this.SearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("SearchIcon.Image")));
             this.SearchIcon.InitialImage = null;
-            this.SearchIcon.Location = new System.Drawing.Point(970, 117);
+            this.SearchIcon.Location = new System.Drawing.Point(968, 65);
             this.SearchIcon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchIcon.Name = "SearchIcon";
             this.SearchIcon.Size = new System.Drawing.Size(45, 40);
@@ -128,7 +128,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(704, 117);
+            this.textBox1.Location = new System.Drawing.Point(698, 64);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 40);
