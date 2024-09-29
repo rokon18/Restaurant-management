@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using iTextSharp.text;
-//using iTextSharp.text.pdf;
+
 using System.IO;
 
 namespace Restaurant_management
@@ -16,16 +15,21 @@ namespace Restaurant_management
     public partial class CartPage : Form
     {
 
+
         public CartPage()
         {
             InitializeComponent();
             InitializeCartColumns();
         }
-
+        public DataGridView DataGridViewCart
+        {
+            get { return dataGridViewCart; }
+        }
 
 
         private void InitializeCartColumns()
         {
+
             // Clear existing columns just in case
             dataGridViewCart.Columns.Clear();
 

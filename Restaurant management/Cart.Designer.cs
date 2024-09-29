@@ -77,7 +77,7 @@ namespace Restaurant_management
             this.panel1.Location = new System.Drawing.Point(842, 163);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 351);
+            this.panel1.Size = new System.Drawing.Size(511, 351);
             this.panel1.TabIndex = 1;
             // 
             // ApplyPromo
@@ -110,7 +110,7 @@ namespace Restaurant_management
             this.button9chkout.Location = new System.Drawing.Point(42, 265);
             this.button9chkout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9chkout.Name = "button9chkout";
-            this.button9chkout.Size = new System.Drawing.Size(452, 72);
+            this.button9chkout.Size = new System.Drawing.Size(360, 72);
             this.button9chkout.TabIndex = 3;
             this.button9chkout.Text = "Checkout Now";
             this.button9chkout.UseVisualStyleBackColor = false;
@@ -231,12 +231,12 @@ namespace Restaurant_management
             this.dataGridViewCart.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCart.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewCart.Location = new System.Drawing.Point(28, 163);
+            this.dataGridViewCart.Location = new System.Drawing.Point(13, 163);
             this.dataGridViewCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewCart.Name = "dataGridViewCart";
             this.dataGridViewCart.ReadOnly = true;
             this.dataGridViewCart.RowHeadersWidth = 62;
-            this.dataGridViewCart.Size = new System.Drawing.Size(774, 749);
+            this.dataGridViewCart.Size = new System.Drawing.Size(821, 609);
             this.dataGridViewCart.TabIndex = 3;
             this.dataGridViewCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellContentClick);
             this.dataGridViewCart.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCart_CellValueChanged);
@@ -246,7 +246,7 @@ namespace Restaurant_management
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1371, 951);
+            this.ClientSize = new System.Drawing.Size(1412, 786);
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.GoMenu);
             this.Controls.Add(this.panel1);

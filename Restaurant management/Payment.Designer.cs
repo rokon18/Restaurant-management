@@ -31,16 +31,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.buttoncancard = new System.Windows.Forms.Button();
-            this.buttoncardcon = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.texbxamount2 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btncanbks = new System.Windows.Forms.Button();
             this.buttonconbks = new System.Windows.Forms.Button();
             this.texbxamount = new System.Windows.Forms.TextBox();
@@ -50,12 +40,22 @@
             this.textBoxaccno = new System.Windows.Forms.TextBox();
             this.leblf1accno = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttoncancard = new System.Windows.Forms.Button();
+            this.buttoncardcon = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.texbxamount2 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.printbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -96,104 +96,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(491, 327);
             this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.buttoncancard);
-            this.panel2.Controls.Add(this.buttoncardcon);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.texbxamount2);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(223, 175);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(549, 279);
-            this.panel2.TabIndex = 3;
-            // 
-            // buttoncancard
-            // 
-            this.buttoncancard.BackColor = System.Drawing.Color.LightGray;
-            this.buttoncancard.Location = new System.Drawing.Point(355, 239);
-            this.buttoncancard.Name = "buttoncancard";
-            this.buttoncancard.Size = new System.Drawing.Size(84, 37);
-            this.buttoncancard.TabIndex = 9;
-            this.buttoncancard.Text = "Cancel";
-            this.buttoncancard.UseVisualStyleBackColor = false;
-            this.buttoncancard.Click += new System.EventHandler(this.buttoncancard_Click);
-            // 
-            // buttoncardcon
-            // 
-            this.buttoncardcon.BackColor = System.Drawing.Color.Silver;
-            this.buttoncardcon.Location = new System.Drawing.Point(141, 239);
-            this.buttoncardcon.Name = "buttoncardcon";
-            this.buttoncardcon.Size = new System.Drawing.Size(98, 37);
-            this.buttoncardcon.TabIndex = 14;
-            this.buttoncardcon.Text = "Confirm";
-            this.buttoncardcon.UseVisualStyleBackColor = false;
-            this.buttoncardcon.Click += new System.EventHandler(this.buttoncardcon_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 145);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Amount:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Card Number:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(370, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "CVV:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(433, 75);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 26);
-            this.textBox4.TabIndex = 10;
-            // 
-            // texbxamount2
-            // 
-            this.texbxamount2.Location = new System.Drawing.Point(141, 139);
-            this.texbxamount2.Name = "texbxamount2";
-            this.texbxamount2.Size = new System.Drawing.Size(223, 26);
-            this.texbxamount2.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(141, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 26);
-            this.textBox2.TabIndex = 9;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(22)))), ((int)(((byte)(118)))));
-            this.pictureBox2.Image = global::Restaurant_management.Properties.Resources.images;
-            this.pictureBox2.Location = new System.Drawing.Point(88, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(372, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
             // 
             // btncanbks
             // 
@@ -279,6 +181,104 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.buttoncancard);
+            this.panel2.Controls.Add(this.buttoncardcon);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.texbxamount2);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Location = new System.Drawing.Point(223, 175);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(549, 279);
+            this.panel2.TabIndex = 3;
+            // 
+            // buttoncancard
+            // 
+            this.buttoncancard.BackColor = System.Drawing.Color.LightGray;
+            this.buttoncancard.Location = new System.Drawing.Point(355, 239);
+            this.buttoncancard.Name = "buttoncancard";
+            this.buttoncancard.Size = new System.Drawing.Size(84, 37);
+            this.buttoncancard.TabIndex = 9;
+            this.buttoncancard.Text = "Cancel";
+            this.buttoncancard.UseVisualStyleBackColor = false;
+            this.buttoncancard.Click += new System.EventHandler(this.buttoncancard_Click);
+            // 
+            // buttoncardcon
+            // 
+            this.buttoncardcon.BackColor = System.Drawing.Color.Silver;
+            this.buttoncardcon.Location = new System.Drawing.Point(141, 239);
+            this.buttoncardcon.Name = "buttoncardcon";
+            this.buttoncardcon.Size = new System.Drawing.Size(98, 37);
+            this.buttoncardcon.TabIndex = 14;
+            this.buttoncardcon.Text = "Confirm";
+            this.buttoncardcon.UseVisualStyleBackColor = false;
+            this.buttoncardcon.Click += new System.EventHandler(this.buttoncardcon_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Amount:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Card Number:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(370, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "CVV:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(22)))), ((int)(((byte)(118)))));
+            this.pictureBox2.Image = global::Restaurant_management.Properties.Resources.images;
+            this.pictureBox2.Location = new System.Drawing.Point(88, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(372, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(433, 75);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(85, 26);
+            this.textBox4.TabIndex = 10;
+            // 
+            // texbxamount2
+            // 
+            this.texbxamount2.Location = new System.Drawing.Point(141, 139);
+            this.texbxamount2.Name = "texbxamount2";
+            this.texbxamount2.Size = new System.Drawing.Size(223, 26);
+            this.texbxamount2.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(141, 78);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(223, 26);
+            this.textBox2.TabIndex = 9;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -299,6 +299,7 @@
             this.printbtn.TabIndex = 4;
             this.printbtn.Text = "Print bill";
             this.printbtn.UseVisualStyleBackColor = false;
+            this.printbtn.Click += new System.EventHandler(this.printbtn_Click);
             // 
             // Payment
             // 
@@ -316,10 +317,10 @@
             this.Text = "Payment";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
