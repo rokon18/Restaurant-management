@@ -19,12 +19,12 @@ namespace Restaurant_management
 
             cartPage = new CartPage();
             cartPage.Tag = this;  // Pass the reference of MenuForm to CartPage
-
+              LoadProductsByCategory("Lunch");
             //user = new userDashboard(Firstname, Lastname, Email, Contactno);
             //user.Tag = this; // Pass the reference of MenuForm to UserDashboard
+             LoadProductsByCategory("Dinner");
 
 
-            
         }
 
         private void btnLunch_Click_1(object sender, EventArgs e)

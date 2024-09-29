@@ -30,21 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerDashboard));
             this.panel1manager = new System.Windows.Forms.Panel();
+            this.btnchgpass = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btndeProduct = new System.Windows.Forms.Button();
             this.btnupdateProduct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.btnchgpass = new System.Windows.Forms.Button();
             this.panel1manager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1manager
             // 
-            this.panel1manager.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1manager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(132)))), ((int)(((byte)(89)))));
             this.panel1manager.Controls.Add(this.btnchgpass);
             this.panel1manager.Controls.Add(this.btnLogout);
             this.panel1manager.Controls.Add(this.btndeProduct);
@@ -56,6 +55,16 @@
             this.panel1manager.Name = "panel1manager";
             this.panel1manager.Size = new System.Drawing.Size(244, 651);
             this.panel1manager.TabIndex = 0;
+            // 
+            // btnchgpass
+            // 
+            this.btnchgpass.Location = new System.Drawing.Point(48, 417);
+            this.btnchgpass.Name = "btnchgpass";
+            this.btnchgpass.Size = new System.Drawing.Size(123, 48);
+            this.btnchgpass.TabIndex = 6;
+            this.btnchgpass.Text = "Change password";
+            this.btnchgpass.UseVisualStyleBackColor = true;
+            this.btnchgpass.Click += new System.EventHandler(this.btnchgpass_Click);
             // 
             // btnLogout
             // 
@@ -118,26 +127,11 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // btnchgpass
-            // 
-            this.btnchgpass.Location = new System.Drawing.Point(48, 417);
-            this.btnchgpass.Name = "btnchgpass";
-            this.btnchgpass.Size = new System.Drawing.Size(123, 48);
-            this.btnchgpass.TabIndex = 6;
-            this.btnchgpass.Text = "Change password";
-            this.btnchgpass.UseVisualStyleBackColor = true;
-            this.btnchgpass.Click += new System.EventHandler(this.btnchgpass_Click);
-            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(913, 663);
             this.Controls.Add(this.panel1manager);
             this.Name = "ManagerDashboard";
@@ -158,7 +152,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btndeProduct;
         private System.Windows.Forms.Button btnupdateProduct;
-        private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button btnchgpass;
     }
 }

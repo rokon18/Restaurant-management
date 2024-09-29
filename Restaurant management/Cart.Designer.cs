@@ -77,7 +77,7 @@ namespace Restaurant_management
             this.panel1.Location = new System.Drawing.Point(842, 163);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 351);
+            this.panel1.Size = new System.Drawing.Size(420, 351);
             this.panel1.TabIndex = 1;
             // 
             // ApplyPromo
@@ -85,7 +85,7 @@ namespace Restaurant_management
             this.ApplyPromo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ApplyPromo.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyPromo.ForeColor = System.Drawing.Color.Black;
-            this.ApplyPromo.Location = new System.Drawing.Point(372, 128);
+            this.ApplyPromo.Location = new System.Drawing.Point(285, 130);
             this.ApplyPromo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ApplyPromo.Name = "ApplyPromo";
             this.ApplyPromo.Size = new System.Drawing.Size(104, 45);
@@ -96,7 +96,7 @@ namespace Restaurant_management
             // 
             // DiscountTextBox
             // 
-            this.DiscountTextBox.Location = new System.Drawing.Point(238, 135);
+            this.DiscountTextBox.Location = new System.Drawing.Point(141, 138);
             this.DiscountTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DiscountTextBox.Name = "DiscountTextBox";
             this.DiscountTextBox.Size = new System.Drawing.Size(114, 26);
@@ -110,7 +110,7 @@ namespace Restaurant_management
             this.button9chkout.Location = new System.Drawing.Point(42, 265);
             this.button9chkout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9chkout.Name = "button9chkout";
-            this.button9chkout.Size = new System.Drawing.Size(360, 72);
+            this.button9chkout.Size = new System.Drawing.Size(280, 72);
             this.button9chkout.TabIndex = 3;
             this.button9chkout.Text = "Checkout Now";
             this.button9chkout.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@ namespace Restaurant_management
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(354, 212);
+            this.label8.Location = new System.Drawing.Point(238, 197);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 36);
@@ -132,7 +132,7 @@ namespace Restaurant_management
             // 
             this.GrandTotal.AutoSize = true;
             this.GrandTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotal.Location = new System.Drawing.Point(394, 212);
+            this.GrandTotal.Location = new System.Drawing.Point(281, 209);
             this.GrandTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GrandTotal.Name = "GrandTotal";
             this.GrandTotal.Size = new System.Drawing.Size(71, 36);
@@ -144,7 +144,7 @@ namespace Restaurant_management
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label33.Location = new System.Drawing.Point(354, 52);
+            this.label33.Location = new System.Drawing.Point(238, 52);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(35, 36);
@@ -155,7 +155,7 @@ namespace Restaurant_management
             // 
             this.SubTotal.AutoSize = true;
             this.SubTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTotal.Location = new System.Drawing.Point(394, 52);
+            this.SubTotal.Location = new System.Drawing.Point(281, 52);
             this.SubTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.Size = new System.Drawing.Size(71, 36);
@@ -177,7 +177,7 @@ namespace Restaurant_management
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(46, 212);
+            this.label7.Location = new System.Drawing.Point(4, 212);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 33);
@@ -189,7 +189,7 @@ namespace Restaurant_management
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(46, 129);
+            this.label6.Location = new System.Drawing.Point(4, 130);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 33);
@@ -201,7 +201,7 @@ namespace Restaurant_management
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(46, 52);
+            this.label5.Location = new System.Drawing.Point(4, 55);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 33);
@@ -213,7 +213,7 @@ namespace Restaurant_management
             this.GoMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.GoMenu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
             this.GoMenu.ForeColor = System.Drawing.Color.Black;
-            this.GoMenu.Location = new System.Drawing.Point(1032, 18);
+            this.GoMenu.Location = new System.Drawing.Point(941, 14);
             this.GoMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoMenu.Name = "GoMenu";
             this.GoMenu.Size = new System.Drawing.Size(321, 83);

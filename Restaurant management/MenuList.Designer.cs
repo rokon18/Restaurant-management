@@ -49,7 +49,7 @@
             this.flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel.Location = new System.Drawing.Point(6, 163);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1348, 782);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1348, 527);
             this.flowLayoutPanel.TabIndex = 0;
             // 
             // btnLunch
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 951);
+            this.ClientSize = new System.Drawing.Size(1371, 799);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.SearchIcon);
             this.Controls.Add(this.GoCart);
