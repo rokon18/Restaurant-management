@@ -12,9 +12,17 @@ namespace Restaurant_management
 {
     public partial class ManagerDashboard : Form
     {
-        public ManagerDashboard()
+        private string Firstname;
+        private string Lastname;
+        private string Email;
+        private string Contactno;
+        public ManagerDashboard(string Firstname, string Lastname, string Email, string Contactno)
         {
             InitializeComponent();
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.Email = Email;
+            this.Contactno = Contactno;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -34,27 +42,26 @@ namespace Restaurant_management
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
            Product_List PL = new Product_List();
-            Login.stack.Push(this);
+            Session.LastForm = this;
             this.Hide();
-            PL.ShowDialog();
+            PL.Show();
 
         }
 
         private void btnchgpass_Click(object sender, EventArgs e)
         {
-          
-            
-                Changepassword ch = new Changepassword();
-                Login.stack.Push(this);
-                this.Hide();
-                ch.Show();
-            
+
+
+            Session.LastForm = this; 
+            Changepassword ch = new Changepassword();
+            this.Hide();
+            ch.Show();
         }
 
         private void btnupdateProduct_Click(object sender, EventArgs e)
         {
             Product_List PL = new Product_List();
-            Login.stack.Push(this);
+            Session.LastForm = this;
             this.Hide();
             PL.Show();
         }
@@ -62,9 +69,21 @@ namespace Restaurant_management
         private void btndeProduct_Click(object sender, EventArgs e)
         {
             Product_List PL = new Product_List();
-            Login.stack.Push(this);
+            Session.LastForm = this;
             this.Hide();
             PL.Show();
+        }
+
+        private void ManagerDashboard_Load(object sender, EventArgs e)
+        {
+          textBox1.Text = $"{Firstname} {Lastname}";
+            textBox2.Text = Contactno;
+            textBox3.Text = Email;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

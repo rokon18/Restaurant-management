@@ -28,7 +28,7 @@ namespace Restaurant_management
 
         private void userDashboard_Load(object sender, EventArgs e)
         {
-            //display all information
+         
             userfullnamelabel.Text = $"{Firstname} {Lastname}";
             labelphone.Text = Contactno;
             emaillabel.Text = Email;
@@ -36,10 +36,10 @@ namespace Restaurant_management
 
         private void Changepasswordbutton_Click(object sender, EventArgs e)
         {
+            Session.LastForm = this; 
             Changepassword ch = new Changepassword();
-            Login.stack.Push(this);
             this.Hide();
-            ch.ShowDialog();
+            ch.Show();
         }
 
         private void Logoutbutton_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Restaurant_management
         private void Orderbutton_Click(object sender, EventArgs e)
         {
             MenuList Ml = new MenuList();
-            Login.stack.Push(this);
+            Session.LastForm = this;
             this.Hide();
             Ml.Show();
 

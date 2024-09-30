@@ -14,10 +14,10 @@ namespace Restaurant_management
 {
     public partial class Login : Form
     {
-        // Stack from Data Structure
-        public static Stack<Form> stack = new Stack<Form>();
+       
+       // public static Stack<Form> stack = new Stack<Form>();
 
-        // Constructor
+        
         public Login()
         {
             InitializeComponent();
@@ -26,9 +26,9 @@ namespace Restaurant_management
         private void SignuplinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Signup sign = new Signup();
-            Login.stack.Push(this);
+           // Login.stack.Push(this);
             this.Hide();
-            sign.ShowDialog();
+            sign.Show();
         }
 
         private void showpasscheckBox_CheckedChanged(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Restaurant_management
             passwordtextBox.UseSystemPasswordChar = !showpasscheckBox.Checked;
         }
 
-        // Connection String 
+      
         string conStr = "Data Source=MSI;Initial Catalog=RMS;Integrated Security=True; ";
 
         private void Loginbutton_Click(object sender, EventArgs e)
@@ -50,19 +50,19 @@ namespace Restaurant_management
                 {
                     con.Open();
 
-                    // Updated query to include the Status column
+                
                     SqlCommand cmd = new SqlCommand("SELECT Firstname, Lastname, Email, Contactno, Role, Status FROM SignupTable WHERE Username = @Username AND Password = @Password", con);
-                    cmd.Parameters.AddWithValue("@Username", usertextBox.Text);
-                    cmd.Parameters.AddWithValue("@Password", passwordtextBox.Text);
+                  cmd.Parameters.AddWithValue("@Username", usertextBox.Text);
+                  cmd.Parameters.AddWithValue("@Password", passwordtextBox.Text);
 
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        // Retrieve Status value
+                        
                         int status = Convert.ToInt32(dr["Status"]);
 
-                        // Check if the account is active
-                        if (status == 1) // Account is active
+                        // Check active/not
+                        if (status == 1) 
                         {
                             string Firstname = dr["Firstname"].ToString();
                             string Lastname = dr["Lastname"].ToString();
@@ -73,24 +73,24 @@ namespace Restaurant_management
                             if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
-                                Login.stack.Push(this);
+                              //  Login.stack.Push(this);
                                 this.Hide();
-                                adminDashboard.ShowDialog();
+                                adminDashboard.Show();
                             }
 
                             else if (Role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
                             {
-                                ManagerDashboard adminDashboard = new ManagerDashboard();
-                                Login.stack.Push(this);
+                                ManagerDashboard manDashboard = new ManagerDashboard(Firstname,Lastname, Email, Contactno);
+                               // Login.stack.Push(this);
                                 this.Hide();
-                                adminDashboard.ShowDialog();
+                                manDashboard.Show();
                             }
                             else
                             {
                                 userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);
-                                Login.stack.Push(this);
+                               // Login.stack.Push(this);
                                 this.Hide();
-                                dashboard.ShowDialog();
+                                dashboard.Show();
                             }
                         }
                         else // Account is inactive
@@ -112,7 +112,7 @@ namespace Restaurant_management
 
         private void label1_Click(object sender, EventArgs e)
         {
-            // Additional functionality if required
+         
         }
     }
 }

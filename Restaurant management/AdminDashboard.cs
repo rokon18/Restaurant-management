@@ -35,9 +35,9 @@ namespace Restaurant_management
         private void Customerbutton_Click(object sender, EventArgs e)
         {
             Customer cus = new Customer();
-            Login.stack.Push(this);
+          
             this.Hide();
-            cus.ShowDialog();
+            cus.Show();
         }
 
         private void Adminnamelabel_Click(object sender, EventArgs e)
@@ -67,8 +67,8 @@ namespace Restaurant_management
 
         private void btnadminchangepasss_Click(object sender, EventArgs e)
         {
+            Session.LastForm = this; 
             Changepassword ch = new Changepassword();
-          //  Login.stack.Push(this);
             this.Hide();
             ch.Show();
         }

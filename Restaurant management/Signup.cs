@@ -14,12 +14,11 @@ namespace Restaurant_management
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (Login.stack.Count > 0)
-            {
-                Form previousForm = Login.stack.Pop();
+            
+                Login login = new Login();
                 this.Hide();
-                previousForm.Show();
-            }
+                login.Show();
+            
         }
 
         private void Showpasscheckbox_CheckedChanged(object sender, EventArgs e)

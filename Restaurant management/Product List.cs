@@ -46,11 +46,11 @@ namespace Restaurant_management
                         }
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
-                            DataTable productsTable = new DataTable();
-                            adapter.Fill(productsTable);
+                            DataTable Products= new DataTable();
+                            adapter.Fill(Products);
 
                             // Bind the DataTable to the DataGridView
-                            dataGridView1.DataSource = productsTable;
+                            dataGridView1.DataSource = Products;
                         }
                     }
                 }
@@ -347,9 +347,10 @@ namespace Restaurant_management
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (Login.stack.Count > 0)
+            Form previousForm = Session.LastForm;
+
+            if (previousForm != null)
             {
-                Form previousForm = Login.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }

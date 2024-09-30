@@ -135,9 +135,10 @@ namespace Restaurant_management
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Login.stack.Count > 0)
+            Form previousForm = Session.LastForm; 
+
+            if (previousForm != null)
             {
-                Form previousForm = Login.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }
