@@ -35,7 +35,7 @@ namespace Restaurant_management
         private void Customerbutton_Click(object sender, EventArgs e)
         {
             Customer cus = new Customer();
-          
+            Session.LastForm = this;
             this.Hide();
             cus.Show();
         }

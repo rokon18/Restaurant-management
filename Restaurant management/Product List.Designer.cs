@@ -268,6 +268,7 @@
             this.Controls.Add(this.textpid);
             this.Controls.Add(this.label1);
             this.Name = "Product_List";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product_List";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

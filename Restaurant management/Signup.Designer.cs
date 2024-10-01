@@ -322,7 +322,6 @@
             this.contacttxt.Name = "contacttxt";
             this.contacttxt.Size = new System.Drawing.Size(245, 33);
             this.contacttxt.TabIndex = 21;
-            this.contacttxt.UseSystemPasswordChar = true;
             // 
             // errorProvider9
             // 

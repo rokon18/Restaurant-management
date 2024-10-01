@@ -199,6 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1manager);
             this.Name = "ManagerDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerDashboard";
             this.Load += new System.EventHandler(this.ManagerDashboard_Load);
             this.panel1manager.ResumeLayout(false);

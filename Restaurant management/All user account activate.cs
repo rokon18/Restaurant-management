@@ -14,8 +14,8 @@ namespace Restaurant_management
         {
             InitializeComponent();
             con = new Functions();
-            showCustomers(); // Load customer data
-            ConfigureDataGridView(); // Configure DataGridView
+            showCustomers(); 
+            ConfigureDataGridView(); 
         }
 
         public void showCustomers()
@@ -25,7 +25,7 @@ namespace Restaurant_management
                 string query = "SELECT Username, Email, Contactno, Role, Status FROM SignupTable WHERE Role IN ('Admin', 'Manager', 'Customer')";
                 DataTable dt = con.GetData(query);
 
-                // Create a new DataTable to hold the modified data
+              
                 DataTable displayTable = new DataTable();
                 displayTable.Columns.Add("Username");
                 displayTable.Columns.Add("Email");
@@ -112,7 +112,7 @@ namespace Restaurant_management
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    // Check if the checkbox is checked
+                    
                     if (Convert.ToBoolean(row.Cells["chkSelect"].Value) == true)
                     {
                         string username = row.Cells["Username"].Value.ToString();
@@ -121,11 +121,11 @@ namespace Restaurant_management
                         {
                             { "@Username", username }
                         };
-                        con.setData(query, parameters); // Execute the command
+                        con.setData(query, parameters); 
                     }
                 }
                 MessageBox.Show("Selected accounts have been deactivated.");
-                showCustomers(); // Refresh the customer data in the DataGridView
+                showCustomers(); 
             }
             catch (Exception ex)
             {

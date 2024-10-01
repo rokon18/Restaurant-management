@@ -15,7 +15,7 @@ namespace Restaurant_management
     public partial class Login : Form
     {
        
-       // public static Stack<Form> stack = new Stack<Form>();
+       
 
         
         public Login()
@@ -26,7 +26,7 @@ namespace Restaurant_management
         private void SignuplinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Signup sign = new Signup();
-           // Login.stack.Push(this);
+           
             this.Hide();
             sign.Show();
         }
@@ -73,7 +73,7 @@ namespace Restaurant_management
                             if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                             {
                                 AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
-                              //  Login.stack.Push(this);
+                              
                                 this.Hide();
                                 adminDashboard.Show();
                             }
@@ -81,19 +81,19 @@ namespace Restaurant_management
                             else if (Role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
                             {
                                 ManagerDashboard manDashboard = new ManagerDashboard(Firstname,Lastname, Email, Contactno);
-                               // Login.stack.Push(this);
+                               
                                 this.Hide();
                                 manDashboard.Show();
                             }
                             else
                             {
                                 userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);
-                               // Login.stack.Push(this);
+                              
                                 this.Hide();
                                 dashboard.Show();
                             }
                         }
-                        else // Account is inactive
+                        else 
                         {
                             MessageBox.Show("Your account is inactive. Please contact the administrator.", "Inactive Account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
