@@ -36,8 +36,8 @@ namespace Restaurant_management
 
         private void Confirmbutton_Click(object sender, EventArgs e)
         {
-            // Get the current user's username from the session
-            string username = Session.CurrentUsername; // Assuming Session.CurrentUsername holds the logged-in username
+            
+            string username = Session.CurrentUsername; 
             string currentPassword = Currentpasswordtxt.Text;
             string newPassword = Newpasswordtxt.Text;
             string confirmPassword = Confirmpasswordtxt.Text;
@@ -81,7 +81,7 @@ namespace Restaurant_management
             };
             DataTable parametersResult = con.GetData(ValidationQuery, validationParameters);
 
-            // Update Password
+            // Update pass
             if (parametersResult.Rows.Count > 0 && parametersResult.Rows[0][0].ToString() == curPass)
             {
                 string updatePassQuery = "UPDATE SignupTable SET Password = @newPass WHERE Username = @username AND Password = @curPass";

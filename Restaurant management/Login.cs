@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -70,7 +67,7 @@ namespace Restaurant_management
                             string Role = dr["Role"].ToString();
                             string Contactno = dr["Contactno"].ToString();
 
-                            if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                            if (Role.Equals("Admin"))
                             {
                                 AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
                               
@@ -78,7 +75,7 @@ namespace Restaurant_management
                                 adminDashboard.Show();
                             }
 
-                            else if (Role.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                            else if (Role.Equals("Manager"))
                             {
                                 ManagerDashboard manDashboard = new ManagerDashboard(Firstname,Lastname, Email, Contactno);
                                

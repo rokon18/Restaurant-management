@@ -18,7 +18,7 @@ namespace Restaurant_management
             conStr = @"Data Source=MSI;Initial Catalog=RMS;Integrated Security=True; ";
             con = new SqlConnection(conStr);
             cmd = new SqlCommand();
-            cmd.Connection = con;
+          
         }
 
         // Method to get data from the database

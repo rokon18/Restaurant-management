@@ -35,24 +35,24 @@ namespace Restaurant_management
 
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    Console.WriteLine("Number of rows fetched: " + dt.Rows.Count);
+                 
                     foreach (DataRow row in dt.Rows)
                     {
-                        // Create a new row for the display table
+                        
                         DataRow newRow = displayTable.NewRow();
                         newRow["Username"] = row["Username"];
                         newRow["Email"] = row["Email"];
                         newRow["Contactno"] = row["Contactno"];
                         newRow["Role"] = row["Role"];
 
-                        // Convert Status from 0/1 to "True"/"False"
+
                         newRow["Status"] = Convert.ToBoolean(row["Status"]) ? "True" : "False";
 
-                        // Add the new row to the display table
+                   
                         displayTable.Rows.Add(newRow);
                     }
 
-                    dataGridView1.DataSource = displayTable; // Bind the modified data source
+                    dataGridView1.DataSource = displayTable; 
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace Restaurant_management
         {
            
 
-            // Add Checkbox Column
+           
             DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
             chk.HeaderText = "Select";
             chk.Name = "chkSelect";
@@ -85,7 +85,7 @@ namespace Restaurant_management
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    // Check if the checkbox is checked
+                   
                     if (Convert.ToBoolean(row.Cells["chkSelect"].Value) == true)
                     {
                         string username = row.Cells["Username"].Value.ToString();
@@ -94,11 +94,11 @@ namespace Restaurant_management
                         {
                             { "@Username", username }
                         };
-                        con.setData(query, parameters); // Execute the command
+                        con.setData(query, parameters);
                     }
                 }
                 MessageBox.Show("Selected accounts have been activated.");
-                showCustomers(); // Refresh the customer data in the DataGridView
+                showCustomers(); 
             }
             catch (Exception ex)
             {

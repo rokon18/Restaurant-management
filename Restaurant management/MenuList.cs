@@ -18,10 +18,10 @@ namespace Restaurant_management
             InitializeComponent();
 
             cartPage = new CartPage();
-            cartPage.Tag = this;  // Pass the reference of MenuForm to CartPage
+            cartPage.Tag = this; 
               LoadProductsByCategory("Lunch");
-            //user = new userDashboard(Firstname, Lastname, Email, Contactno);
-            //user.Tag = this; // Pass the reference of MenuForm to UserDashboard
+            
+           
              LoadProductsByCategory("Dinner");
 
 
@@ -29,20 +29,20 @@ namespace Restaurant_management
 
         private void btnLunch_Click_1(object sender, EventArgs e)
         {
-            LoadProductsByCategory("Lunch"); // Load lunch category products
+            LoadProductsByCategory("Lunch"); 
         }
 
         private void btnDinner_Click_1(object sender, EventArgs e)
         {
-            LoadProductsByCategory("Dinner"); // Load dinner category products
+            LoadProductsByCategory("Dinner"); 
         }
 
         private void LoadProductsByCategory(string category)
         {
-            // Clear existing products from the FlowLayoutPanel
+           
             flowLayoutPanel.Controls.Clear();
 
-            // Connection string to your database
+            
             string connectionString = "Data Source=MSI;Initial Catalog=RMS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -50,8 +50,8 @@ namespace Restaurant_management
                 try
                 {
                     connection.Open();
-                    // SQL query to fetch product data based on the selected category
-                    string query = "use [RMS] SELECT ProductName, Price, Quantity, ProductImage FROM products WHERE Category = @Category";
+                 
+                    string query = " SELECT ProductName, Price, Quantity, ProductImage FROM products WHERE Category = @Category";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Category", category);
@@ -59,7 +59,7 @@ namespace Restaurant_management
 
                     while (reader.Read())
                     {
-                        // Create a UI for each product fetched from the database
+                        
                         CreateProductItem(
                             reader["ProductName"].ToString(),
                             reader["Price"].ToString(),
@@ -70,13 +70,13 @@ namespace Restaurant_management
                 }
                 catch (Exception ex)
                 {
-                    // Display any errors encountered while fetching data
+                   
                     MessageBox.Show("Error fetching product data: " + ex.Message);
                 }
             }
         }
 
-        // Function to create and add a product item to the FlowLayoutPanel
+     
         private void CreateProductItem(string productName, string price, string quantity, byte[] imageData)
         {
             // Create a new panel for each product
@@ -131,23 +131,19 @@ namespace Restaurant_management
                 int selectedQuantity = (int)quantityNumericUpDown.Value;
                 if (selectedQuantity > 0)
                 {
-                    // Reduce quantity in the database and get new available quantity
+                    
                     int newQuantity = UpdateProductQuantity(productName, selectedQuantity);
                  
                     if (newQuantity >= 0)
                     {
-                        // Parse the price from the label (assuming the price label has the format "৳<price>")
-                        decimal priceValue = decimal.Parse(priceLabel.Text.Substring(1)); // Remove the "৳" symbol and convert to decimal
-
-                        // Add the product to the cart (using the CartPage method)
-                       // CartPage cartPage = new CartPage(); // Or however you access your CartPage instance
+                        
+                        decimal priceValue = decimal.Parse(priceLabel.Text.Substring(1)); 
+                      
                         cartPage.AddProductToCart(productName, priceValue, selectedQuantity);
 
                         MessageBox.Show($"{selectedQuantity} of {productName} added to the cart.");
 
-                        // Update the displayed available quantity
                         quantityLabel.Text = "Available: " + newQuantity;
-                       // quantityNumericUpDown.Maximum = newQuantity; // Update max quantity in NumericUpDown
                     }
                     else
                     {
@@ -182,7 +178,7 @@ namespace Restaurant_management
             {
                
                     connection.Open();
-                    string query = "use [RMS] UPDATE products SET Quantity = Quantity - @Quantity WHERE ProductName = @ProductName AND Quantity >= @Quantity";
+                    string query = " UPDATE products SET Quantity = Quantity - @Quantity WHERE ProductName = @ProductName AND Quantity >= @Quantity";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -190,7 +186,7 @@ namespace Restaurant_management
                         command.Parameters.AddWithValue("@ProductName", productName);
                         int rowsAffected = command.ExecuteNonQuery();
 
-                    return 0; // Return true if the quantity was successfully updated
+                    return 0; 
                     }
                 
                
@@ -205,7 +201,7 @@ namespace Restaurant_management
 
         private void GoProfile_Click(object sender, EventArgs e)
         {
-            Form previousForm = Session.LastForm; // Get the last opened form from session
+            Form previousForm = Session.LastForm; 
 
             if (previousForm != null)
             {

@@ -35,10 +35,10 @@
             this.btnLunch = new System.Windows.Forms.Button();
             this.btnDinner = new System.Windows.Forms.Button();
             this.GoProfile = new System.Windows.Forms.Button();
-            this.GoCart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchIcon = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.GoCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -90,20 +90,6 @@
             this.GoProfile.UseVisualStyleBackColor = false;
             this.GoProfile.Click += new System.EventHandler(this.GoProfile_Click);
             // 
-            // GoCart
-            // 
-            this.GoCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.GoCart.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
-            this.GoCart.ForeColor = System.Drawing.Color.Black;
-            this.GoCart.Location = new System.Drawing.Point(1051, 45);
-            this.GoCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GoCart.Name = "GoCart";
-            this.GoCart.Size = new System.Drawing.Size(202, 62);
-            this.GoCart.TabIndex = 32;
-            this.GoCart.Text = "Go to Cart";
-            this.GoCart.UseVisualStyleBackColor = false;
-            this.GoCart.Click += new System.EventHandler(this.GoCart_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Restaurant_management.Properties.Resources.download;
@@ -134,6 +120,20 @@
             this.textBox1.Size = new System.Drawing.Size(273, 40);
             this.textBox1.TabIndex = 38;
             // 
+            // GoCart
+            // 
+            this.GoCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.GoCart.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.5F, System.Drawing.FontStyle.Bold);
+            this.GoCart.ForeColor = System.Drawing.Color.Black;
+            this.GoCart.Location = new System.Drawing.Point(1051, 45);
+            this.GoCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GoCart.Name = "GoCart";
+            this.GoCart.Size = new System.Drawing.Size(202, 62);
+            this.GoCart.TabIndex = 32;
+            this.GoCart.Text = "Go to Cart";
+            this.GoCart.UseVisualStyleBackColor = false;
+            this.GoCart.Click += new System.EventHandler(this.GoCart_Click);
+            // 
             // MenuList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -161,9 +161,9 @@
         private System.Windows.Forms.Button btnLunch;
         private System.Windows.Forms.Button btnDinner;
         private System.Windows.Forms.Button GoProfile;
-        private System.Windows.Forms.Button GoCart;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox SearchIcon;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button GoCart;
     }
 }
