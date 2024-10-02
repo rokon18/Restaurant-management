@@ -21,7 +21,7 @@ namespace Restaurant_management
           
         }
 
-        // Method to get data from the database
+       
         public DataTable GetData(string query, Dictionary<string, object> parameters = null)
         {
             DataTable dt = new DataTable();
@@ -50,16 +50,16 @@ namespace Restaurant_management
             }
             catch (Exception ex)
             {
-                // Log the exception message for debugging
+                
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
 
-            return dt; // Always return a DataTable (empty if an error occurred)
+            return dt; 
         }
 
 
 
-        //Execute a non-query (insert, update, delete) command
+       
         public int setData(string query, Dictionary<string, object> parameters = null)
         {
             int cnt = 0;
@@ -72,10 +72,10 @@ namespace Restaurant_management
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    // Clear previous parameters
+                   
                     cmd.Parameters.Clear();
 
-                    // Add new parameters
+                   
                     if (parameters != null)
                     {
                         foreach (var param in parameters)
