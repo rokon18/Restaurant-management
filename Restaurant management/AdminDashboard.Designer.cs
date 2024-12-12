@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logoutbutton = new System.Windows.Forms.Button();
             this.Customerbutton = new System.Windows.Forms.Button();
-            this.Addmanagerbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.Emailadresslabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.emaillabel = new System.Windows.Forms.Label();
+            this.btnadminchangepasss = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,9 +55,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnadminchangepasss);
             this.panel1.Controls.Add(this.Logoutbutton);
             this.panel1.Controls.Add(this.Customerbutton);
-            this.panel1.Controls.Add(this.Addmanagerbutton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-2, -4);
@@ -72,7 +72,7 @@
             this.Logoutbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logoutbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logoutbutton.Location = new System.Drawing.Point(40, 476);
+            this.Logoutbutton.Location = new System.Drawing.Point(40, 596);
             this.Logoutbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logoutbutton.Name = "Logoutbutton";
             this.Logoutbutton.Size = new System.Drawing.Size(188, 51);
@@ -86,30 +86,15 @@
             this.Customerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Customerbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Customerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Customerbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customerbutton.Location = new System.Drawing.Point(40, 360);
+            this.Customerbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+            this.Customerbutton.Location = new System.Drawing.Point(41, 233);
             this.Customerbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Customerbutton.Name = "Customerbutton";
-            this.Customerbutton.Size = new System.Drawing.Size(188, 51);
+            this.Customerbutton.Size = new System.Drawing.Size(188, 66);
             this.Customerbutton.TabIndex = 4;
-            this.Customerbutton.Text = "Customer";
+            this.Customerbutton.Text = "Activate all Account";
             this.Customerbutton.UseVisualStyleBackColor = false;
             this.Customerbutton.Click += new System.EventHandler(this.Customerbutton_Click);
-            // 
-            // Addmanagerbutton
-            // 
-            this.Addmanagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Addmanagerbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Addmanagerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Addmanagerbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addmanagerbutton.Location = new System.Drawing.Point(40, 262);
-            this.Addmanagerbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Addmanagerbutton.Name = "Addmanagerbutton";
-            this.Addmanagerbutton.Size = new System.Drawing.Size(188, 51);
-            this.Addmanagerbutton.TabIndex = 3;
-            this.Addmanagerbutton.Text = "Add Manager";
-            this.Addmanagerbutton.UseVisualStyleBackColor = false;
-            this.Addmanagerbutton.Click += new System.EventHandler(this.Addmanagerbutton_Click);
             // 
             // label1
             // 
@@ -208,7 +193,6 @@
             this.phonelabel.Size = new System.Drawing.Size(138, 25);
             this.phonelabel.TabIndex = 19;
             this.phonelabel.Text = "880 1456656";
-            
             // 
             // Emailadresslabel
             // 
@@ -241,6 +225,18 @@
             this.emaillabel.Size = new System.Drawing.Size(181, 29);
             this.emaillabel.TabIndex = 19;
             this.emaillabel.Text = "xyz@email.com";
+            // 
+            // btnadminchangepasss
+            // 
+            this.btnadminchangepasss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnadminchangepasss.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnadminchangepasss.Location = new System.Drawing.Point(40, 499);
+            this.btnadminchangepasss.Name = "btnadminchangepasss";
+            this.btnadminchangepasss.Size = new System.Drawing.Size(188, 60);
+            this.btnadminchangepasss.TabIndex = 6;
+            this.btnadminchangepasss.Text = "change password";
+            this.btnadminchangepasss.UseVisualStyleBackColor = false;
+            this.btnadminchangepasss.Click += new System.EventHandler(this.btnadminchangepasss_Click);
             // 
             // AdminDashboard
             // 
@@ -279,7 +275,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Addmanagerbutton;
         private System.Windows.Forms.Button Logoutbutton;
         private System.Windows.Forms.Button Customerbutton;
         private System.Windows.Forms.Label label3;
@@ -292,5 +287,6 @@
         private System.Windows.Forms.Label Emailadresslabel;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label emaillabel;
+        private System.Windows.Forms.Button btnadminchangepasss;
     }
 }

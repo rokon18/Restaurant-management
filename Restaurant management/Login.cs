@@ -40,40 +40,50 @@ namespace Restaurant_management
 
         private void Loginbutton_Click(object sender, EventArgs e)
         {
-            
             if (usertextBox.Text != "" && passwordtextBox.Text != "")
             {
                 using (SqlConnection con = new SqlConnection(conStr))
                 {
                     con.Open();
 
-                    
-                    SqlCommand cmd = new SqlCommand("SELECT Firstname, Lastname, Email,Contactno, Role FROM SignupTable WHERE Username = @Username AND Password = @Password", con);
+                    // Updated query to include the Status column
+                    SqlCommand cmd = new SqlCommand("SELECT Firstname, Lastname, Email, Contactno, Role, Status FROM SignupTable WHERE Username = @Username AND Password = @Password", con);
                     cmd.Parameters.AddWithValue("@Username", usertextBox.Text);
                     cmd.Parameters.AddWithValue("@Password", passwordtextBox.Text);
 
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        string Firstname = dr["Firstname"].ToString();
-                        string Lastname = dr["Lastname"].ToString();
-                        string Email = dr["Email"].ToString();
-                        string Role = dr["Role"].ToString();
-                        string Contactno = dr["Contactno"].ToString();
+                        // Retrieve Status value
+                        int status = Convert.ToInt32(dr["Status"]);
 
-                        if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                        // Check if the account is active
+                        if (status == 1) // Account is active
                         {
-                            AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
-                            Login.stack.Push(this);
-                            this.Hide();
-                            adminDashboard.ShowDialog();
+                            string Firstname = dr["Firstname"].ToString();
+                            string Lastname = dr["Lastname"].ToString();
+                            string Email = dr["Email"].ToString();
+                            string Role = dr["Role"].ToString();
+                            string Contactno = dr["Contactno"].ToString();
+
+                            if (Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                            {
+                                AdminDashboard adminDashboard = new AdminDashboard(Firstname, Email, Contactno);
+                                Login.stack.Push(this);
+                                this.Hide();
+                                adminDashboard.ShowDialog();
+                            }
+                            else
+                            {
+                                userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);
+                                Login.stack.Push(this);
+                                this.Hide();
+                                dashboard.ShowDialog();
+                            }
                         }
-                        else
+                        else // Account is inactive
                         {
-                            userDashboard dashboard = new userDashboard(Firstname, Lastname, Email, Contactno);
-                            Login.stack.Push(this);
-                            this.Hide();
-                            dashboard.ShowDialog();
+                            MessageBox.Show("Your account is inactive. Please contact the administrator.", "Inactive Account", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -90,7 +100,7 @@ namespace Restaurant_management
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            // Additional functionality if required
         }
     }
 }

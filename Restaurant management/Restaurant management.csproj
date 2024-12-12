@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adminaddmanger.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Adminaddmanger.Designer.cs">
-      <DependentUpon>Adminaddmanger.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +58,11 @@
     <Compile Include="Changepassword.Designer.cs">
       <DependentUpon>Changepassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="All user account activate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="All user account activate.Designer.cs">
+      <DependentUpon>All user account activate.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="Login.cs">
@@ -76,6 +70,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,17 +91,14 @@
     <Compile Include="userDashboard.Designer.cs">
       <DependentUpon>userDashboard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Adminaddmanger.resx">
-      <DependentUpon>Adminaddmanger.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Changepassword.resx">
       <DependentUpon>Changepassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="All user account activate.resx">
+      <DependentUpon>All user account activate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
